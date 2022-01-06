@@ -1,0 +1,1468 @@
+lockfileVersion: 5.3
+
+specifiers:
+  '@rollup/plugin-commonjs': ^21.0.1
+  '@rollup/plugin-node-resolve': ^13.1.2
+  esno: ^0.13.0
+  pixi.js: ^6.2.1
+  rimraf: ^3.0.2
+  rollup: ^2.63.0
+  rollup-plugin-esbuild: ^4.8.2
+  rollup-plugin-typescript2: ^0.31.1
+  tslib: ^2.3.1
+  typescript: ^4.5.4
+
+devDependencies:
+  '@rollup/plugin-commonjs': 21.0.1_rollup@2.63.0
+  '@rollup/plugin-node-resolve': 13.1.2_rollup@2.63.0
+  esno: 0.13.0_typescript@4.5.4
+  pixi.js: 6.2.1
+  rimraf: 3.0.2
+  rollup: 2.63.0
+  rollup-plugin-esbuild: 4.8.2_rollup@2.63.0
+  rollup-plugin-typescript2: 0.31.1_rollup@2.63.0+typescript@4.5.4
+  tslib: 2.3.1
+  typescript: 4.5.4
+
+packages:
+
+  /@pixi/accessibility/6.2.1_0d73c62036669f541116e605da87f869:
+    resolution: {integrity: sha512-zXgXx3BostasR69a68BDGVMEjL5CWBct+LtongU1T8HgdXbu2BPaZ/Z679pMj23+5oAR0mUeoH7qTTyRQ2kS3g==, tarball: '@pixi/accessibility/download/@pixi/accessibility-6.2.1.tgz'}
+    peerDependencies:
+      '@pixi/core': 6.2.1
+      '@pixi/display': 6.2.1
+      '@pixi/utils': 6.2.1
+    dependencies:
+      '@pixi/core': 6.2.1_df051550645010bdf6fa89694bb02821
+      '@pixi/display': 6.2.1_1d33a1a6f36d9b164ecad80ec2850ee4
+      '@pixi/utils': 6.2.1_3e04be5e664f83402a3249471d1d4424
+    dev: true
+
+  /@pixi/app/6.2.1_aceb95ab22e2234d543e5a00b62355d3:
+    resolution: {integrity: sha512-J1dlu4PTF6O9WfHKTs0pg3NSePW2+8M2yMrivR7R/Z3CmmebnRiquua7U/avQXkLVJBwGdSyij2e6fN8dvnUXw==, tarball: '@pixi/app/download/@pixi/app-6.2.1.tgz'}
+    peerDependencies:
+      '@pixi/core': 6.2.1
+      '@pixi/display': 6.2.1
+    dependencies:
+      '@pixi/core': 6.2.1_df051550645010bdf6fa89694bb02821
+      '@pixi/display': 6.2.1_1d33a1a6f36d9b164ecad80ec2850ee4
+    dev: true
+
+  /@pixi/compressed-textures/6.2.1_4570dd0dd66864252550461512680eed:
+    resolution: {integrity: sha512-ZtmitA5ClIBqBo/dR1pd2n/y/xxOC+UKAj1S04FZiXaekYjmcsPUKxbq2Mgp8Qk2PBdz98HSQ4/xOGAYBMWrdQ==, tarball: '@pixi/compressed-textures/download/@pixi/compressed-textures-6.2.1.tgz'}
+    peerDependencies:
+      '@pixi/constants': 6.2.1
+      '@pixi/core': 6.2.1
+      '@pixi/loaders': 6.2.1
+      '@pixi/utils': 6.2.1
+    dependencies:
+      '@pixi/constants': 6.2.1
+      '@pixi/core': 6.2.1_df051550645010bdf6fa89694bb02821
+      '@pixi/loaders': 6.2.1_0445c811d1aa420add98db068b3fbdb0
+      '@pixi/utils': 6.2.1_3e04be5e664f83402a3249471d1d4424
+    dev: true
+
+  /@pixi/constants/6.2.1:
+    resolution: {integrity: sha512-Dppt6rjYP4mIvJCY1I38XhPSfXoOm+A+ERKljLjcvcxVAMhqCTVz3YMp2cUzaio6DtQutiQ6tT06M40xlBZ/lA==, tarball: '@pixi/constants/download/@pixi/constants-6.2.1.tgz'}
+    dev: true
+
+  /@pixi/core/6.2.1_df051550645010bdf6fa89694bb02821:
+    resolution: {integrity: sha512-Ndh4/sNXWEkDeU5waWBCsMMPPaQv5uXLyepPXJE0emHBtgJOjKEHa79hrr0p1I2KN7Q8+mw8WlK55yVGuHroIA==, tarball: '@pixi/core/download/@pixi/core-6.2.1.tgz'}
+    peerDependencies:
+      '@pixi/constants': 6.2.1
+      '@pixi/math': 6.2.1
+      '@pixi/runner': 6.2.1
+      '@pixi/settings': 6.2.1
+      '@pixi/ticker': 6.2.1
+      '@pixi/utils': 6.2.1
+    dependencies:
+      '@pixi/constants': 6.2.1
+      '@pixi/math': 6.2.1
+      '@pixi/runner': 6.2.1
+      '@pixi/settings': 6.2.1
+      '@pixi/ticker': 6.2.1_@pixi+settings@6.2.1
+      '@pixi/utils': 6.2.1_3e04be5e664f83402a3249471d1d4424
+    dev: true
+
+  /@pixi/display/6.2.1_1d33a1a6f36d9b164ecad80ec2850ee4:
+    resolution: {integrity: sha512-4taHTgQeAWXrxB4WV0CsyarFEVuI8seKU+12S57c8nQGRYESfDUx4jFatWfgMHY2xCNwCdPTCvlSJzT5ou8VWA==, tarball: '@pixi/display/download/@pixi/display-6.2.1.tgz'}
+    peerDependencies:
+      '@pixi/math': 6.2.1
+      '@pixi/settings': 6.2.1
+      '@pixi/utils': 6.2.1
+    dependencies:
+      '@pixi/math': 6.2.1
+      '@pixi/settings': 6.2.1
+      '@pixi/utils': 6.2.1_3e04be5e664f83402a3249471d1d4424
+    dev: true
+
+  /@pixi/extract/6.2.1_720b1a2efe21855310638cafcfb57ede:
+    resolution: {integrity: sha512-11MTxqXaZlsYRf9QumEDqZXoTb2RlIwpL42k7CnY7ycP+pu8TV+HB5NfLzFltCjnzXuBbl0/bz8eYeU5cSlVkA==, tarball: '@pixi/extract/download/@pixi/extract-6.2.1.tgz'}
+    peerDependencies:
+      '@pixi/core': 6.2.1
+      '@pixi/math': 6.2.1
+      '@pixi/utils': 6.2.1
+    dependencies:
+      '@pixi/core': 6.2.1_df051550645010bdf6fa89694bb02821
+      '@pixi/math': 6.2.1
+      '@pixi/utils': 6.2.1_3e04be5e664f83402a3249471d1d4424
+    dev: true
+
+  /@pixi/filter-alpha/6.2.1_@pixi+core@6.2.1:
+    resolution: {integrity: sha512-f/xSY+T9JnpzrtB2F1EOsGr6urgln6Wdr/NQgVk13L/g8jrM/PhMlbDsodEwf5IL/2xRjAFwYjCFMgzWVXALkw==, tarball: '@pixi/filter-alpha/download/@pixi/filter-alpha-6.2.1.tgz'}
+    peerDependencies:
+      '@pixi/core': 6.2.1
+    dependencies:
+      '@pixi/core': 6.2.1_df051550645010bdf6fa89694bb02821
+    dev: true
+
+  /@pixi/filter-blur/6.2.1_7e73f8e619ab2754135a83402dece0a7:
+    resolution: {integrity: sha512-5pIcdL4u5WAwGHsI8uNovb4iK50l+7Dz1ZIwuwbkGU8Xoti/dzeox4bgywnXPq+yN33/Ty0nwd7VYuHmaNl/Rw==, tarball: '@pixi/filter-blur/download/@pixi/filter-blur-6.2.1.tgz'}
+    peerDependencies:
+      '@pixi/core': 6.2.1
+      '@pixi/settings': 6.2.1
+    dependencies:
+      '@pixi/core': 6.2.1_df051550645010bdf6fa89694bb02821
+      '@pixi/settings': 6.2.1
+    dev: true
+
+  /@pixi/filter-color-matrix/6.2.1_@pixi+core@6.2.1:
+    resolution: {integrity: sha512-f3yyaruhr8lAVv13YpMb5L4yolvuTygq05CvM3OIFK+dP5bYar2cajGc1Zu0bR3VGF03N8JeHxCUwfMwV7V7AA==, tarball: '@pixi/filter-color-matrix/download/@pixi/filter-color-matrix-6.2.1.tgz'}
+    peerDependencies:
+      '@pixi/core': 6.2.1
+    dependencies:
+      '@pixi/core': 6.2.1_df051550645010bdf6fa89694bb02821
+    dev: true
+
+  /@pixi/filter-displacement/6.2.1_466426cda9ccff9f6b7ca02ef067a902:
+    resolution: {integrity: sha512-o/MjC3tz1y3qZwf22FThGSqfn+zN5bMaBoXn+xSfCqC48thg9vgl2REq0jerDDMVSMW8vUvBUARfT+Wfm3SMDw==, tarball: '@pixi/filter-displacement/download/@pixi/filter-displacement-6.2.1.tgz'}
+    peerDependencies:
+      '@pixi/core': 6.2.1
+      '@pixi/math': 6.2.1
+    dependencies:
+      '@pixi/core': 6.2.1_df051550645010bdf6fa89694bb02821
+      '@pixi/math': 6.2.1
+    dev: true
+
+  /@pixi/filter-fxaa/6.2.1_@pixi+core@6.2.1:
+    resolution: {integrity: sha512-mIiAhBBDrOOPm1UF4isp7ti3d0y1y0xIZJnYbi15/Stmi1EQsMckDKg+V5uq9qbSm1jP3KoYq9dd7Oz/lr9srw==, tarball: '@pixi/filter-fxaa/download/@pixi/filter-fxaa-6.2.1.tgz'}
+    peerDependencies:
+      '@pixi/core': 6.2.1
+    dependencies:
+      '@pixi/core': 6.2.1_df051550645010bdf6fa89694bb02821
+    dev: true
+
+  /@pixi/filter-noise/6.2.1_@pixi+core@6.2.1:
+    resolution: {integrity: sha512-jDIKo65p1VbqfUKuvb9UaNWaL4SRoc0SMYUwhSJcPjaWKv5bl7Ifqa6b/iQ31ZGHZGSot2ypwFeBiZLG1ndInQ==, tarball: '@pixi/filter-noise/download/@pixi/filter-noise-6.2.1.tgz'}
+    peerDependencies:
+      '@pixi/core': 6.2.1
+    dependencies:
+      '@pixi/core': 6.2.1_df051550645010bdf6fa89694bb02821
+    dev: true
+
+  /@pixi/graphics/6.2.1_034fe82e0b7c37335078a5be42a50651:
+    resolution: {integrity: sha512-/MQREXYx+/glVAQLyNTLnd9+C1Bktm/F1XDzu5swDQSRH2Fo1rCh3mPw0dmJmrWrOOpBTO2+W7Kgm6NkENw9qA==, tarball: '@pixi/graphics/download/@pixi/graphics-6.2.1.tgz'}
+    peerDependencies:
+      '@pixi/constants': 6.2.1
+      '@pixi/core': 6.2.1
+      '@pixi/display': 6.2.1
+      '@pixi/math': 6.2.1
+      '@pixi/sprite': 6.2.1
+      '@pixi/utils': 6.2.1
+    dependencies:
+      '@pixi/constants': 6.2.1
+      '@pixi/core': 6.2.1_df051550645010bdf6fa89694bb02821
+      '@pixi/display': 6.2.1_1d33a1a6f36d9b164ecad80ec2850ee4
+      '@pixi/math': 6.2.1
+      '@pixi/sprite': 6.2.1_a5021554595e851f1bd0aeb0c831d747
+      '@pixi/utils': 6.2.1_3e04be5e664f83402a3249471d1d4424
+    dev: true
+
+  /@pixi/interaction/6.2.1_2f12d893b3b69cfbe54a5422fcfb7e1e:
+    resolution: {integrity: sha512-WsubcDQt447+JtDhDHNfkmkEah4Ytry5WYIKbUZSvBdIc9LVXHPLQ+gM4mKkprEV8ZsQb6H/NbmtIKxjxHGYvw==, tarball: '@pixi/interaction/download/@pixi/interaction-6.2.1.tgz'}
+    peerDependencies:
+      '@pixi/core': 6.2.1
+      '@pixi/display': 6.2.1
+      '@pixi/math': 6.2.1
+      '@pixi/ticker': 6.2.1
+      '@pixi/utils': 6.2.1
+    dependencies:
+      '@pixi/core': 6.2.1_df051550645010bdf6fa89694bb02821
+      '@pixi/display': 6.2.1_1d33a1a6f36d9b164ecad80ec2850ee4
+      '@pixi/math': 6.2.1
+      '@pixi/ticker': 6.2.1_@pixi+settings@6.2.1
+      '@pixi/utils': 6.2.1_3e04be5e664f83402a3249471d1d4424
+    dev: true
+
+  /@pixi/loaders/6.2.1_0445c811d1aa420add98db068b3fbdb0:
+    resolution: {integrity: sha512-UB1uYb3HL4uN1q+w916DNLIZzz7gkg3p4QQRmBXq08Dnj8DWCghPRAfTGfCu3ORqYqEwSaZ+ulLT+SRfHryvyQ==, tarball: '@pixi/loaders/download/@pixi/loaders-6.2.1.tgz'}
+    peerDependencies:
+      '@pixi/constants': 6.2.1
+      '@pixi/core': 6.2.1
+      '@pixi/utils': 6.2.1
+    dependencies:
+      '@pixi/constants': 6.2.1
+      '@pixi/core': 6.2.1_df051550645010bdf6fa89694bb02821
+      '@pixi/utils': 6.2.1_3e04be5e664f83402a3249471d1d4424
+    dev: true
+
+  /@pixi/math/6.2.1:
+    resolution: {integrity: sha512-ejAHHbJSRtAhpFVFOQ4niavCDkjISWBxjFQoqznManDZKXBH0vf8EQBWSth5Cp9wXXAG0mAt4gzlwYXEf7Axkg==, tarball: '@pixi/math/download/@pixi/math-6.2.1.tgz'}
+    dev: true
+
+  /@pixi/mesh-extras/6.2.1_f1d195b9b3256951824ba57c8871862e:
+    resolution: {integrity: sha512-mgIRiW4W5aOI1lDawNBTNsDZAy+qBGwwBgYsvRqjqOK6cxQ2pnDSEvphK3k2k+Qk2zUBFzqIxSWcG9EWnDQf2Q==, tarball: '@pixi/mesh-extras/download/@pixi/mesh-extras-6.2.1.tgz'}
+    peerDependencies:
+      '@pixi/constants': 6.2.1
+      '@pixi/core': 6.2.1
+      '@pixi/math': 6.2.1
+      '@pixi/mesh': 6.2.1
+      '@pixi/utils': 6.2.1
+    dependencies:
+      '@pixi/constants': 6.2.1
+      '@pixi/core': 6.2.1_df051550645010bdf6fa89694bb02821
+      '@pixi/math': 6.2.1
+      '@pixi/mesh': 6.2.1_a5021554595e851f1bd0aeb0c831d747
+      '@pixi/utils': 6.2.1_3e04be5e664f83402a3249471d1d4424
+    dev: true
+
+  /@pixi/mesh/6.2.1_a5021554595e851f1bd0aeb0c831d747:
+    resolution: {integrity: sha512-ekLhRxk6g8sVwrEj3xtVNmyCoCgKSIlqVYL26a2QWYAllWeP1FZiCmBJGk6FAXlIrzG76+aymiUVH35pD1gZvw==, tarball: '@pixi/mesh/download/@pixi/mesh-6.2.1.tgz'}
+    peerDependencies:
+      '@pixi/constants': 6.2.1
+      '@pixi/core': 6.2.1
+      '@pixi/display': 6.2.1
+      '@pixi/math': 6.2.1
+      '@pixi/settings': 6.2.1
+      '@pixi/utils': 6.2.1
+    dependencies:
+      '@pixi/constants': 6.2.1
+      '@pixi/core': 6.2.1_df051550645010bdf6fa89694bb02821
+      '@pixi/display': 6.2.1_1d33a1a6f36d9b164ecad80ec2850ee4
+      '@pixi/math': 6.2.1
+      '@pixi/settings': 6.2.1
+      '@pixi/utils': 6.2.1_3e04be5e664f83402a3249471d1d4424
+    dev: true
+
+  /@pixi/mixin-cache-as-bitmap/6.2.1_ba4fdb112950673509298511dc6b3afd:
+    resolution: {integrity: sha512-+KsDxCrlvWK2S4ExaKMWFp5RPiFxbBZS2rQ3yrA5GTUC4uZUWm3QptVjHmWb1kjgD5l/QOGF40ZFTu8FfqXtlg==, tarball: '@pixi/mixin-cache-as-bitmap/download/@pixi/mixin-cache-as-bitmap-6.2.1.tgz'}
+    peerDependencies:
+      '@pixi/core': 6.2.1
+      '@pixi/display': 6.2.1
+      '@pixi/math': 6.2.1
+      '@pixi/settings': 6.2.1
+      '@pixi/sprite': 6.2.1
+      '@pixi/utils': 6.2.1
+    dependencies:
+      '@pixi/core': 6.2.1_df051550645010bdf6fa89694bb02821
+      '@pixi/display': 6.2.1_1d33a1a6f36d9b164ecad80ec2850ee4
+      '@pixi/math': 6.2.1
+      '@pixi/settings': 6.2.1
+      '@pixi/sprite': 6.2.1_a5021554595e851f1bd0aeb0c831d747
+      '@pixi/utils': 6.2.1_3e04be5e664f83402a3249471d1d4424
+    dev: true
+
+  /@pixi/mixin-get-child-by-name/6.2.1_@pixi+display@6.2.1:
+    resolution: {integrity: sha512-Osrydgec/Zqu1rxz3wJlNH8qe3a8qyOC6dvzS0QlU6gIe7EUfqFSKSCsnht8zDFTNOBPL/hzG1JKDWTOBqRj8g==, tarball: '@pixi/mixin-get-child-by-name/download/@pixi/mixin-get-child-by-name-6.2.1.tgz'}
+    peerDependencies:
+      '@pixi/display': 6.2.1
+    dependencies:
+      '@pixi/display': 6.2.1_1d33a1a6f36d9b164ecad80ec2850ee4
+    dev: true
+
+  /@pixi/mixin-get-global-position/6.2.1_56b20ebf8842efecd39d113c254f170d:
+    resolution: {integrity: sha512-3W5u3b5A4U6glUMPal1/8vug5gs5CIlum9K30VnNQ2Q2bC4mZ6CEBHVIN6pG7ekg3E7xbLwp/WlZM9wZ1yr7ng==, tarball: '@pixi/mixin-get-global-position/download/@pixi/mixin-get-global-position-6.2.1.tgz'}
+    peerDependencies:
+      '@pixi/display': 6.2.1
+      '@pixi/math': 6.2.1
+    dependencies:
+      '@pixi/display': 6.2.1_1d33a1a6f36d9b164ecad80ec2850ee4
+      '@pixi/math': 6.2.1
+    dev: true
+
+  /@pixi/particle-container/6.2.1_4912b6a6a843e20da688d7ff2a4fb940:
+    resolution: {integrity: sha512-uk8erald8eGiucE0336YTIOS4e1HkSYc8ZYkJnCfxEPcOSMyPEmInI+kWtq0IHa1icX9G4zZRh9rj3vCfCLY+A==, tarball: '@pixi/particle-container/download/@pixi/particle-container-6.2.1.tgz'}
+    peerDependencies:
+      '@pixi/constants': 6.2.1
+      '@pixi/core': 6.2.1
+      '@pixi/display': 6.2.1
+      '@pixi/math': 6.2.1
+      '@pixi/utils': 6.2.1
+    dependencies:
+      '@pixi/constants': 6.2.1
+      '@pixi/core': 6.2.1_df051550645010bdf6fa89694bb02821
+      '@pixi/display': 6.2.1_1d33a1a6f36d9b164ecad80ec2850ee4
+      '@pixi/math': 6.2.1
+      '@pixi/utils': 6.2.1_3e04be5e664f83402a3249471d1d4424
+    dev: true
+
+  /@pixi/polyfill/6.2.1:
+    resolution: {integrity: sha512-t7xHLTq3L1FBWT65LR+L1rTjqFq6yDAS+07cG4GCp1TrjcBGV4RGNuB4VhlQOsxVJIhzzEry+3TQt6/EenQ5TQ==, tarball: '@pixi/polyfill/download/@pixi/polyfill-6.2.1.tgz'}
+    dependencies:
+      object-assign: 4.1.1
+      promise-polyfill: 8.2.1
+    dev: true
+
+  /@pixi/prepare/6.2.1_af55ba3ad4aed622a0ddec9f80a6fcab:
+    resolution: {integrity: sha512-SsNnZilq0gikrO/LjL+gEaUzmrFpkNeROgyfT6Pa3l2HWqG4eoU+iPxSH3f0WshYyZPLF793ryFut9tSJKLCSw==, tarball: '@pixi/prepare/download/@pixi/prepare-6.2.1.tgz'}
+    peerDependencies:
+      '@pixi/core': 6.2.1
+      '@pixi/display': 6.2.1
+      '@pixi/graphics': 6.2.1
+      '@pixi/settings': 6.2.1
+      '@pixi/text': 6.2.1
+      '@pixi/ticker': 6.2.1
+    dependencies:
+      '@pixi/core': 6.2.1_df051550645010bdf6fa89694bb02821
+      '@pixi/display': 6.2.1_1d33a1a6f36d9b164ecad80ec2850ee4
+      '@pixi/graphics': 6.2.1_034fe82e0b7c37335078a5be42a50651
+      '@pixi/settings': 6.2.1
+      '@pixi/text': 6.2.1_ea0f6c1db7ab9c63b2a36efd859e0e1e
+      '@pixi/ticker': 6.2.1_@pixi+settings@6.2.1
+    dev: true
+
+  /@pixi/runner/6.2.1:
+    resolution: {integrity: sha512-m3dB5b212WJ3wa7QGBY27NckHtQu1TR2FwtEeMyL0g0tSfCf1ve0Pegf39q9PQ4D1/C1j0n58JuKBqSf9oH66Q==, tarball: '@pixi/runner/download/@pixi/runner-6.2.1.tgz'}
+    dev: true
+
+  /@pixi/settings/6.2.1:
+    resolution: {integrity: sha512-GVgLgTdEMZDSEyly+yX+49MhVzEiSyJCHItAurLUVGLvi443AcRuK57mYVNDdTfOn2VRIvwW7FNgwdrzq58WWQ==, tarball: '@pixi/settings/download/@pixi/settings-6.2.1.tgz'}
+    dependencies:
+      ismobilejs: 1.1.1
+    dev: true
+
+  /@pixi/sprite-animated/6.2.1_d611442354a186932caa7508522c6d21:
+    resolution: {integrity: sha512-puJtJFcHgyYuWf4EdFOVMFimtQsTxskNwI/CMw5HQBuz8dPB3aHensVGyv7mPzr0zpl7Ruzb6l+F5Y/G6jbugg==, tarball: '@pixi/sprite-animated/download/@pixi/sprite-animated-6.2.1.tgz'}
+    peerDependencies:
+      '@pixi/core': 6.2.1
+      '@pixi/sprite': 6.2.1
+      '@pixi/ticker': 6.2.1
+    dependencies:
+      '@pixi/core': 6.2.1_df051550645010bdf6fa89694bb02821
+      '@pixi/sprite': 6.2.1_a5021554595e851f1bd0aeb0c831d747
+      '@pixi/ticker': 6.2.1_@pixi+settings@6.2.1
+    dev: true
+
+  /@pixi/sprite-tiling/6.2.1_034fe82e0b7c37335078a5be42a50651:
+    resolution: {integrity: sha512-YPPqRRBp7JvQq1MjGU7IaKL+7WNeSsHNjUlQfawPR3XvNFLKb7zks1DvR09AziMm8u4h6/wfejFuRycqg/3gvQ==, tarball: '@pixi/sprite-tiling/download/@pixi/sprite-tiling-6.2.1.tgz'}
+    peerDependencies:
+      '@pixi/constants': 6.2.1
+      '@pixi/core': 6.2.1
+      '@pixi/display': 6.2.1
+      '@pixi/math': 6.2.1
+      '@pixi/sprite': 6.2.1
+      '@pixi/utils': 6.2.1
+    dependencies:
+      '@pixi/constants': 6.2.1
+      '@pixi/core': 6.2.1_df051550645010bdf6fa89694bb02821
+      '@pixi/display': 6.2.1_1d33a1a6f36d9b164ecad80ec2850ee4
+      '@pixi/math': 6.2.1
+      '@pixi/sprite': 6.2.1_a5021554595e851f1bd0aeb0c831d747
+      '@pixi/utils': 6.2.1_3e04be5e664f83402a3249471d1d4424
+    dev: true
+
+  /@pixi/sprite/6.2.1_a5021554595e851f1bd0aeb0c831d747:
+    resolution: {integrity: sha512-NV4mS3vUcVgi9qKtY3SH/tf5goinCAJId3bmj76MAlBDNaE8wyu7bEcWLQFIHC59zxJCOd5D/iOmDqVKiOu4Dw==, tarball: '@pixi/sprite/download/@pixi/sprite-6.2.1.tgz'}
+    peerDependencies:
+      '@pixi/constants': 6.2.1
+      '@pixi/core': 6.2.1
+      '@pixi/display': 6.2.1
+      '@pixi/math': 6.2.1
+      '@pixi/settings': 6.2.1
+      '@pixi/utils': 6.2.1
+    dependencies:
+      '@pixi/constants': 6.2.1
+      '@pixi/core': 6.2.1_df051550645010bdf6fa89694bb02821
+      '@pixi/display': 6.2.1_1d33a1a6f36d9b164ecad80ec2850ee4
+      '@pixi/math': 6.2.1
+      '@pixi/settings': 6.2.1
+      '@pixi/utils': 6.2.1_3e04be5e664f83402a3249471d1d4424
+    dev: true
+
+  /@pixi/spritesheet/6.2.1_f7272aeb0863e6b6ce7dd21b6fb952c9:
+    resolution: {integrity: sha512-mCJn3044/VX2Z0nGr+5brWR2F9akKzKAI4OBqmQU4mfiy7Q4+MM0Fgk9vHc7wKCuhUz//U7SmK6CdCqZknVaAA==, tarball: '@pixi/spritesheet/download/@pixi/spritesheet-6.2.1.tgz'}
+    peerDependencies:
+      '@pixi/core': 6.2.1
+      '@pixi/loaders': 6.2.1
+      '@pixi/math': 6.2.1
+      '@pixi/utils': 6.2.1
+    dependencies:
+      '@pixi/core': 6.2.1_df051550645010bdf6fa89694bb02821
+      '@pixi/loaders': 6.2.1_0445c811d1aa420add98db068b3fbdb0
+      '@pixi/math': 6.2.1
+      '@pixi/utils': 6.2.1_3e04be5e664f83402a3249471d1d4424
+    dev: true
+
+  /@pixi/text-bitmap/6.2.1_ee50e84376f7bae8d8c67165504906b8:
+    resolution: {integrity: sha512-fbOz1aTyXUu0+fuWVnL6eGu5WhpQlF83GM8CKBo2j4NqhxYnkIn4r5g2QSYXVAZ5PSeUjGO0o7lUKxZN0Wq2gg==, tarball: '@pixi/text-bitmap/download/@pixi/text-bitmap-6.2.1.tgz'}
+    peerDependencies:
+      '@pixi/constants': 6.2.1
+      '@pixi/core': 6.2.1
+      '@pixi/display': 6.2.1
+      '@pixi/loaders': 6.2.1
+      '@pixi/math': 6.2.1
+      '@pixi/mesh': 6.2.1
+      '@pixi/settings': 6.2.1
+      '@pixi/text': 6.2.1
+      '@pixi/utils': 6.2.1
+    dependencies:
+      '@pixi/constants': 6.2.1
+      '@pixi/core': 6.2.1_df051550645010bdf6fa89694bb02821
+      '@pixi/display': 6.2.1_1d33a1a6f36d9b164ecad80ec2850ee4
+      '@pixi/loaders': 6.2.1_0445c811d1aa420add98db068b3fbdb0
+      '@pixi/math': 6.2.1
+      '@pixi/mesh': 6.2.1_a5021554595e851f1bd0aeb0c831d747
+      '@pixi/settings': 6.2.1
+      '@pixi/text': 6.2.1_ea0f6c1db7ab9c63b2a36efd859e0e1e
+      '@pixi/utils': 6.2.1_3e04be5e664f83402a3249471d1d4424
+    dev: true
+
+  /@pixi/text/6.2.1_ea0f6c1db7ab9c63b2a36efd859e0e1e:
+    resolution: {integrity: sha512-vTwXm6RVcSa4RXlqknxf1y7Q35fyOWIlERz3eb6STcoGFOwbXSjdIsAkamjKzbasfF0rSe910QHYxs2XWJ6ozA==, tarball: '@pixi/text/download/@pixi/text-6.2.1.tgz'}
+    peerDependencies:
+      '@pixi/core': 6.2.1
+      '@pixi/math': 6.2.1
+      '@pixi/settings': 6.2.1
+      '@pixi/sprite': 6.2.1
+      '@pixi/utils': 6.2.1
+    dependencies:
+      '@pixi/core': 6.2.1_df051550645010bdf6fa89694bb02821
+      '@pixi/math': 6.2.1
+      '@pixi/settings': 6.2.1
+      '@pixi/sprite': 6.2.1_a5021554595e851f1bd0aeb0c831d747
+      '@pixi/utils': 6.2.1_3e04be5e664f83402a3249471d1d4424
+    dev: true
+
+  /@pixi/ticker/6.2.1_@pixi+settings@6.2.1:
+    resolution: {integrity: sha512-J9UCTIJswM7HO76CtBpJAB+EMBxElmJ+JV9uTUQBGZVc6cmQI9JPPx1QcDWVkuF4qv1Keeh0Tjhnq8Sjc701AA==, tarball: '@pixi/ticker/download/@pixi/ticker-6.2.1.tgz'}
+    peerDependencies:
+      '@pixi/settings': 6.2.1
+    dependencies:
+      '@pixi/settings': 6.2.1
+    dev: true
+
+  /@pixi/utils/6.2.1_3e04be5e664f83402a3249471d1d4424:
+    resolution: {integrity: sha512-aLOIzDZ6ccJ/DfGs9vldjWXn3RHpOMR26Bkr3aeynn/p1rdY3n2dzC8oKWwVb3gPQWmsEZJa8QuLvOiIwHqAJg==, tarball: '@pixi/utils/download/@pixi/utils-6.2.1.tgz'}
+    peerDependencies:
+      '@pixi/constants': 6.2.1
+      '@pixi/settings': 6.2.1
+    dependencies:
+      '@pixi/constants': 6.2.1
+      '@pixi/settings': 6.2.1
+      '@types/earcut': 2.1.1
+      earcut: 2.2.3
+      eventemitter3: 3.1.2
+      url: 0.11.0
+    dev: true
+
+  /@rollup/plugin-commonjs/21.0.1_rollup@2.63.0:
+    resolution: {integrity: sha1-HlfIGuFRjk3wlU1oHGQufZRYj+4=, tarball: '@rollup/plugin-commonjs/download/@rollup/plugin-commonjs-21.0.1.tgz'}
+    engines: {node: '>= 8.0.0'}
+    peerDependencies:
+      rollup: ^2.38.3
+    dependencies:
+      '@rollup/pluginutils': 3.1.0_rollup@2.63.0
+      commondir: 1.0.1
+      estree-walker: 2.0.2
+      glob: 7.2.0
+      is-reference: 1.2.1
+      magic-string: 0.25.7
+      resolve: 1.20.0
+      rollup: 2.63.0
+    dev: true
+
+  /@rollup/plugin-node-resolve/13.1.2_rollup@2.63.0:
+    resolution: {integrity: sha512-xyqbuf1vyOPC60jEKhx3DBHunymnCJswzjNTKfX4Jz7zCPar1UqbRZCNY1u5QaXh97beaFTWdoUUWiV4qX8o/g==, tarball: '@rollup/plugin-node-resolve/download/@rollup/plugin-node-resolve-13.1.2.tgz'}
+    engines: {node: '>= 10.0.0'}
+    peerDependencies:
+      rollup: ^2.42.0
+    dependencies:
+      '@rollup/pluginutils': 3.1.0_rollup@2.63.0
+      '@types/resolve': 1.17.1
+      builtin-modules: 3.2.0
+      deepmerge: 4.2.2
+      is-module: 1.0.0
+      resolve: 1.20.0
+      rollup: 2.63.0
+    dev: true
+
+  /@rollup/pluginutils/3.1.0_rollup@2.63.0:
+    resolution: {integrity: sha1-cGtFJO5tyLEDs8mVUz5a1oDAK5s=, tarball: '@rollup/pluginutils/download/@rollup/pluginutils-3.1.0.tgz'}
+    engines: {node: '>= 8.0.0'}
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0
+    dependencies:
+      '@types/estree': 0.0.39
+      estree-walker: 1.0.1
+      picomatch: 2.3.1
+      rollup: 2.63.0
+    dev: true
+
+  /@rollup/pluginutils/4.1.2:
+    resolution: {integrity: sha512-ROn4qvkxP9SyPeHaf7uQC/GPFY6L/OWy9+bd9AwcjOAWQwxRscoEyAUD8qCY5o5iL4jqQwoLk2kaTKJPb/HwzQ==, tarball: '@rollup/pluginutils/download/@rollup/pluginutils-4.1.2.tgz'}
+    engines: {node: '>= 8.0.0'}
+    dependencies:
+      estree-walker: 2.0.2
+      picomatch: 2.3.1
+    dev: true
+
+  /@ts-type/package-dts/1.0.56:
+    resolution: {integrity: sha512-nBjbCaVV+R81jk7q/6sRuNYOhDAbBOmaCkPI2quK0Rnye2f4FUHX+4JL+3rDPiRPHxgX3pNfVKKHBlPAHiRddw==, tarball: '@ts-type/package-dts/download/@ts-type/package-dts-1.0.56.tgz'}
+    dependencies:
+      '@types/semver': 7.3.9
+      ts-type: 2.1.2
+    transitivePeerDependencies:
+      - '@types/bluebird'
+      - '@types/node'
+      - ts-toolbelt
+    dev: true
+
+  /@types/earcut/2.1.1:
+    resolution: {integrity: sha1-VzoK9gnxcAXHUfb0/+xJz+NY6lE=, tarball: '@types/earcut/download/@types/earcut-2.1.1.tgz'}
+    dev: true
+
+  /@types/estree/0.0.39:
+    resolution: {integrity: sha1-4Xfmme4bjCLSMXTKqnQiZEOJUJ8=, tarball: '@types/estree/download/@types/estree-0.0.39.tgz'}
+    dev: true
+
+  /@types/node/17.0.8:
+    resolution: {integrity: sha512-YofkM6fGv4gDJq78g4j0mMuGMkZVxZDgtU0JRdx6FgiJDG+0fY0GKVolOV8WqVmEhLCXkQRjwDdKyPxJp/uucg==, tarball: '@types/node/download/@types/node-17.0.8.tgz'}
+    dev: true
+
+  /@types/resolve/1.17.1:
+    resolution: {integrity: sha1-Ov1q2JZ8d+Q3bFmKgt3Vj0bsRdY=, tarball: '@types/resolve/download/@types/resolve-1.17.1.tgz'}
+    dependencies:
+      '@types/node': 17.0.8
+    dev: true
+
+  /@types/semver/7.3.9:
+    resolution: {integrity: sha1-FSxsIKdojDC5Z+wYQdMazlaYY/w=, tarball: '@types/semver/download/@types/semver-7.3.9.tgz'}
+    dev: true
+
+  /@yarn-tool/resolve-package/1.0.41:
+    resolution: {integrity: sha512-ybJqQztdSkTr9Z0BkPo5OlQBZoHlXHHXxssPJgFT8lFgyOxlhkjUg3WBFn7MSK6JMUoXU32wd2KKFBL/Fgsb8Q==, tarball: '@yarn-tool/resolve-package/download/@yarn-tool/resolve-package-1.0.41.tgz'}
+    dependencies:
+      '@ts-type/package-dts': 1.0.56
+      pkg-dir: 5.0.0
+      tslib: 2.3.1
+      upath2: 3.1.12
+    transitivePeerDependencies:
+      - '@types/bluebird'
+      - '@types/node'
+      - ts-toolbelt
+    dev: true
+
+  /balanced-match/1.0.2:
+    resolution: {integrity: sha1-6D46fj8wCzTLnYf2FfoMvzV2kO4=, tarball: balanced-match/download/balanced-match-1.0.2.tgz}
+    dev: true
+
+  /brace-expansion/1.1.11:
+    resolution: {integrity: sha1-PH/L9SnYcibz0vUrlm/1Jx60Qd0=, tarball: brace-expansion/download/brace-expansion-1.1.11.tgz}
+    dependencies:
+      balanced-match: 1.0.2
+      concat-map: 0.0.1
+    dev: true
+
+  /builtin-modules/3.2.0:
+    resolution: {integrity: sha1-RdXbmefuXmvE82LgCL+RerUEmIc=, tarball: builtin-modules/download/builtin-modules-3.2.0.tgz}
+    engines: {node: '>=6'}
+    dev: true
+
+  /builtins/4.0.0:
+    resolution: {integrity: sha1-qDRUIN6CBo/cTWVZ0EVkA6j7GQU=, tarball: builtins/download/builtins-4.0.0.tgz}
+    dependencies:
+      semver: 7.3.5
+    dev: true
+
+  /commondir/1.0.1:
+    resolution: {integrity: sha1-3dgA2gxmEnOTzKWVDqloo6rxJTs=, tarball: commondir/download/commondir-1.0.1.tgz}
+    dev: true
+
+  /concat-map/0.0.1:
+    resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=, tarball: concat-map/download/concat-map-0.0.1.tgz}
+    dev: true
+
+  /cross-spawn/7.0.3:
+    resolution: {integrity: sha1-9zqFudXUHQRVUcF34ogtSshXKKY=, tarball: cross-spawn/download/cross-spawn-7.0.3.tgz}
+    engines: {node: '>= 8'}
+    dependencies:
+      path-key: 3.1.1
+      shebang-command: 2.0.0
+      which: 2.0.2
+    dev: true
+
+  /debug/4.3.3:
+    resolution: {integrity: sha512-/zxw5+vh1Tfv+4Qn7a5nsbcJKPaSvCDhojn6FEl9vupwK2VCSDtEiEtqr8DFtzYFOdz63LBkxec7DYuc2jon6Q==, tarball: debug/download/debug-4.3.3.tgz}
+    engines: {node: '>=6.0'}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
+    dependencies:
+      ms: 2.1.2
+    dev: true
+
+  /deepmerge/4.2.2:
+    resolution: {integrity: sha1-RNLqNnm49NT/ujPwPYZfwee/SVU=, tarball: deepmerge/download/deepmerge-4.2.2.tgz}
+    engines: {node: '>=0.10.0'}
+    dev: true
+
+  /earcut/2.2.3:
+    resolution: {integrity: sha1-1EztL/WhiFlWjjJ92cfUaxb1XPQ=, tarball: earcut/download/earcut-2.2.3.tgz}
+    dev: true
+
+  /es-module-lexer/0.9.3:
+    resolution: {integrity: sha1-bxPbAMw4QXE32vdDZvU1yOtDjxk=, tarball: es-module-lexer/download/es-module-lexer-0.9.3.tgz}
+    dev: true
+
+  /esbuild-android-arm64/0.13.15:
+    resolution: {integrity: sha512-m602nft/XXeO8YQPUDVoHfjyRVPdPgjyyXOxZ44MK/agewFFkPa8tUo6lAzSWh5Ui5PB4KR9UIFTSBKh/RrCmg==, tarball: esbuild-android-arm64/download/esbuild-android-arm64-0.13.15.tgz}
+    cpu: [arm64]
+    os: [android]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-android-arm64/0.14.10:
+    resolution: {integrity: sha512-vzkTafHKoiMX4uIN1kBnE/HXYLpNT95EgGanVk6DHGeYgDolU0NBxjO7yZpq4ZGFPOx8384eAdDrBYhO11TAlQ==, tarball: esbuild-android-arm64/download/esbuild-android-arm64-0.14.10.tgz}
+    cpu: [arm64]
+    os: [android]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-darwin-64/0.13.15:
+    resolution: {integrity: sha512-ihOQRGs2yyp7t5bArCwnvn2Atr6X4axqPpEdCFPVp7iUj4cVSdisgvEKdNR7yH3JDjW6aQDw40iQFoTqejqxvQ==, tarball: esbuild-darwin-64/download/esbuild-darwin-64-0.13.15.tgz}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-darwin-64/0.14.10:
+    resolution: {integrity: sha512-DJwzFVB95ZV7C3PQbf052WqaUuuMFXJeZJ0LKdnP1w+QOU0rlbKfX0tzuhoS//rOXUj1TFIwRuRsd0FX6skR7A==, tarball: esbuild-darwin-64/download/esbuild-darwin-64-0.14.10.tgz}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-darwin-arm64/0.13.15:
+    resolution: {integrity: sha512-i1FZssTVxUqNlJ6cBTj5YQj4imWy3m49RZRnHhLpefFIh0To05ow9DTrXROTE1urGTQCloFUXTX8QfGJy1P8dQ==, tarball: esbuild-darwin-arm64/download/esbuild-darwin-arm64-0.13.15.tgz}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-darwin-arm64/0.14.10:
+    resolution: {integrity: sha512-RNaaoZDg3nsqs5z56vYCjk/VJ76npf752W0rOaCl5lO5TsgV9zecfdYgt7dtUrIx8b7APhVaNYud+tGsDOVC9g==, tarball: esbuild-darwin-arm64/download/esbuild-darwin-arm64-0.14.10.tgz}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-freebsd-64/0.13.15:
+    resolution: {integrity: sha512-G3dLBXUI6lC6Z09/x+WtXBXbOYQZ0E8TDBqvn7aMaOCzryJs8LyVXKY4CPnHFXZAbSwkCbqiPuSQ1+HhrNk7EA==, tarball: esbuild-freebsd-64/download/esbuild-freebsd-64-0.13.15.tgz}
+    cpu: [x64]
+    os: [freebsd]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-freebsd-64/0.14.10:
+    resolution: {integrity: sha512-10B3AzW894u6bGZZhWiJOHw1uEHb4AFbUuBdyml1Ht0vIqd+KqWW+iY/yMwQAzILr2WJZqEhbOXRkJtY8aRqOw==, tarball: esbuild-freebsd-64/download/esbuild-freebsd-64-0.14.10.tgz}
+    cpu: [x64]
+    os: [freebsd]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-freebsd-arm64/0.13.15:
+    resolution: {integrity: sha512-KJx0fzEDf1uhNOZQStV4ujg30WlnwqUASaGSFPhznLM/bbheu9HhqZ6mJJZM32lkyfGJikw0jg7v3S0oAvtvQQ==, tarball: esbuild-freebsd-arm64/download/esbuild-freebsd-arm64-0.13.15.tgz}
+    cpu: [arm64]
+    os: [freebsd]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-freebsd-arm64/0.14.10:
+    resolution: {integrity: sha512-mSQrKB7UaWvuryBTCo9leOfY2uEUSimAvcKIaUWbk5Hth9Sg+Try+qNA/NibPgs/vHkX0KFo/Rce6RPea+P15g==, tarball: esbuild-freebsd-arm64/download/esbuild-freebsd-arm64-0.14.10.tgz}
+    cpu: [arm64]
+    os: [freebsd]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-linux-32/0.13.15:
+    resolution: {integrity: sha512-ZvTBPk0YWCLMCXiFmD5EUtB30zIPvC5Itxz0mdTu/xZBbbHJftQgLWY49wEPSn2T/TxahYCRDWun5smRa0Tu+g==, tarball: esbuild-linux-32/download/esbuild-linux-32-0.13.15.tgz}
+    cpu: [ia32]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-linux-32/0.14.10:
+    resolution: {integrity: sha512-lktF09JgJLZ63ANYHIPdYe339PDuVn19Q/FcGKkXWf+jSPkn5xkYzAabboNGZNUgNqSJ/vY7VrOn6UrBbJjgYA==, tarball: esbuild-linux-32/download/esbuild-linux-32-0.14.10.tgz}
+    cpu: [ia32]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-linux-64/0.13.15:
+    resolution: {integrity: sha512-eCKzkNSLywNeQTRBxJRQ0jxRCl2YWdMB3+PkWFo2BBQYC5mISLIVIjThNtn6HUNqua1pnvgP5xX0nHbZbPj5oA==, tarball: esbuild-linux-64/download/esbuild-linux-64-0.13.15.tgz}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-linux-64/0.14.10:
+    resolution: {integrity: sha512-K+gCQz2oLIIBI8ZM77e9sYD5/DwEpeYCrOQ2SYXx+R4OU2CT9QjJDi4/OpE7ko4AcYMlMW7qrOCuLSgAlEj4Wg==, tarball: esbuild-linux-64/download/esbuild-linux-64-0.14.10.tgz}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-linux-arm/0.13.15:
+    resolution: {integrity: sha512-wUHttDi/ol0tD8ZgUMDH8Ef7IbDX+/UsWJOXaAyTdkT7Yy9ZBqPg8bgB/Dn3CZ9SBpNieozrPRHm0BGww7W/jA==, tarball: esbuild-linux-arm/download/esbuild-linux-arm-0.13.15.tgz}
+    cpu: [arm]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-linux-arm/0.14.10:
+    resolution: {integrity: sha512-BYa60dZ/KPmNKYxtHa3LSEdfKWHcm/RzP0MjB4AeBPhjS0D6/okhaBesZIY9kVIGDyeenKsJNOmnVt4+dhNnvQ==, tarball: esbuild-linux-arm/download/esbuild-linux-arm-0.14.10.tgz}
+    cpu: [arm]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-linux-arm64/0.13.15:
+    resolution: {integrity: sha512-bYpuUlN6qYU9slzr/ltyLTR9YTBS7qUDymO8SV7kjeNext61OdmqFAzuVZom+OLW1HPHseBfJ/JfdSlx8oTUoA==, tarball: esbuild-linux-arm64/download/esbuild-linux-arm64-0.13.15.tgz}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-linux-arm64/0.14.10:
+    resolution: {integrity: sha512-+qocQuQvcp5wo/V+OLXxqHPc+gxHttJEvbU/xrCGE03vIMqraL4wMua8JQx0SWEnJCWP+Nhf//v8OSwz1Xr5kA==, tarball: esbuild-linux-arm64/download/esbuild-linux-arm64-0.14.10.tgz}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-linux-mips64le/0.13.15:
+    resolution: {integrity: sha512-KlVjIG828uFPyJkO/8gKwy9RbXhCEUeFsCGOJBepUlpa7G8/SeZgncUEz/tOOUJTcWMTmFMtdd3GElGyAtbSWg==, tarball: esbuild-linux-mips64le/download/esbuild-linux-mips64le-0.13.15.tgz}
+    cpu: [mips64el]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-linux-mips64le/0.14.10:
+    resolution: {integrity: sha512-nmUd2xoBXpGo4NJCEWoaBj+n4EtDoLEvEYc8Z3aSJrY0Oa6s04czD1flmhd0I/d6QEU8b7GQ9U0g/rtBfhtxBg==, tarball: esbuild-linux-mips64le/download/esbuild-linux-mips64le-0.14.10.tgz}
+    cpu: [mips64el]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-linux-ppc64le/0.13.15:
+    resolution: {integrity: sha512-h6gYF+OsaqEuBjeesTBtUPw0bmiDu7eAeuc2OEH9S6mV9/jPhPdhOWzdeshb0BskRZxPhxPOjqZ+/OqLcxQwEQ==, tarball: esbuild-linux-ppc64le/download/esbuild-linux-ppc64le-0.13.15.tgz}
+    cpu: [ppc64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-linux-ppc64le/0.14.10:
+    resolution: {integrity: sha512-vsOWZjm0rZix7HSmqwPph9arRVCyPtUpcURdayQDuIhMG2/UxJxpbdRaa//w4zYqcJzAWwuyH2PAlyy0ZNuxqQ==, tarball: esbuild-linux-ppc64le/download/esbuild-linux-ppc64le-0.14.10.tgz}
+    cpu: [ppc64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-linux-s390x/0.14.10:
+    resolution: {integrity: sha512-knArKKZm0ypIYWOWyOT7+accVwbVV1LZnl2FWWy05u9Tyv5oqJ2F5+X2Vqe/gqd61enJXQWqoufXopvG3zULOg==, tarball: esbuild-linux-s390x/download/esbuild-linux-s390x-0.14.10.tgz}
+    cpu: [s390x]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-netbsd-64/0.13.15:
+    resolution: {integrity: sha512-3+yE9emwoevLMyvu+iR3rsa+Xwhie7ZEHMGDQ6dkqP/ndFzRHkobHUKTe+NCApSqG5ce2z4rFu+NX/UHnxlh3w==, tarball: esbuild-netbsd-64/download/esbuild-netbsd-64-0.13.15.tgz}
+    cpu: [x64]
+    os: [netbsd]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-netbsd-64/0.14.10:
+    resolution: {integrity: sha512-6Gg8neVcLeyq0yt9bZpReb8ntZ8LBEjthxrcYWVrBElcltnDjIy1hrzsujt0+sC2rL+TlSsE9dzgyuvlDdPp2w==, tarball: esbuild-netbsd-64/download/esbuild-netbsd-64-0.14.10.tgz}
+    cpu: [x64]
+    os: [netbsd]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-node-loader/0.6.3_typescript@4.5.4:
+    resolution: {integrity: sha512-Bf6o8SiMMh5+r20jsjAThNOtzo3t8Ye4Qdzz+twWHnxu28SdkGUr5ahq8iX0qbd+I9ge8sLNX7oQoNW1YzHlqA==, tarball: esbuild-node-loader/download/esbuild-node-loader-0.6.3.tgz}
+    peerDependencies:
+      typescript: ^4.0
+    dependencies:
+      esbuild: 0.13.15
+      typescript: 4.5.4
+    dev: true
+
+  /esbuild-openbsd-64/0.13.15:
+    resolution: {integrity: sha512-wTfvtwYJYAFL1fSs8yHIdf5GEE4NkbtbXtjLWjM3Cw8mmQKqsg8kTiqJ9NJQe5NX/5Qlo7Xd9r1yKMMkHllp5g==, tarball: esbuild-openbsd-64/download/esbuild-openbsd-64-0.13.15.tgz}
+    cpu: [x64]
+    os: [openbsd]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-openbsd-64/0.14.10:
+    resolution: {integrity: sha512-9rkHZzp10zI90CfKbFrwmQjqZaeDmyQ6s9/hvCwRkbOCHuto6RvMYH9ghQpcr5cUxD5OQIA+sHXi0zokRNXjcg==, tarball: esbuild-openbsd-64/download/esbuild-openbsd-64-0.14.10.tgz}
+    cpu: [x64]
+    os: [openbsd]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-register/3.3.1_esbuild@0.14.10:
+    resolution: {integrity: sha512-DjK9rOeo+Dhq8DXKy52DF2+O7zNPXkFRg9lZfqXDGLU6AzrULxBJZPOOFcH6WCNfkwqymKOZoNvd/ncCvEjwdw==, tarball: esbuild-register/download/esbuild-register-3.3.1.tgz}
+    peerDependencies:
+      esbuild: '>=0.12 <1'
+    dependencies:
+      esbuild: 0.14.10
+    dev: true
+
+  /esbuild-sunos-64/0.13.15:
+    resolution: {integrity: sha512-lbivT9Bx3t1iWWrSnGyBP9ODriEvWDRiweAs69vI+miJoeKwHWOComSRukttbuzjZ8r1q0mQJ8Z7yUsDJ3hKdw==, tarball: esbuild-sunos-64/download/esbuild-sunos-64-0.13.15.tgz}
+    cpu: [x64]
+    os: [sunos]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-sunos-64/0.14.10:
+    resolution: {integrity: sha512-mEU+pqkhkhbwpJj5DiN3vL0GUFR/yrL3qj8ER1amIVyRibKbj02VM1QaIuk1sy5DRVIKiFXXgCaHvH3RNWCHIw==, tarball: esbuild-sunos-64/download/esbuild-sunos-64-0.14.10.tgz}
+    cpu: [x64]
+    os: [sunos]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-windows-32/0.13.15:
+    resolution: {integrity: sha512-fDMEf2g3SsJ599MBr50cY5ve5lP1wyVwTe6aLJsM01KtxyKkB4UT+fc5MXQFn3RLrAIAZOG+tHC+yXObpSn7Nw==, tarball: esbuild-windows-32/download/esbuild-windows-32-0.13.15.tgz}
+    cpu: [ia32]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-windows-32/0.14.10:
+    resolution: {integrity: sha512-Z5DieUL1N6s78dOSdL95KWf8Y89RtPGxIoMF+LEy8ChDsX+pZpz6uAVCn+YaWpqQXO+2TnrcbgBIoprq2Mco1g==, tarball: esbuild-windows-32/download/esbuild-windows-32-0.14.10.tgz}
+    cpu: [ia32]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-windows-64/0.13.15:
+    resolution: {integrity: sha512-9aMsPRGDWCd3bGjUIKG/ZOJPKsiztlxl/Q3C1XDswO6eNX/Jtwu4M+jb6YDH9hRSUflQWX0XKAfWzgy5Wk54JQ==, tarball: esbuild-windows-64/download/esbuild-windows-64-0.13.15.tgz}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-windows-64/0.14.10:
+    resolution: {integrity: sha512-LE5Mm62y0Bilu7RDryBhHIX8rK3at5VwJ6IGM3BsASidCfOBTzqcs7Yy0/Vkq39VKeTmy9/66BAfVoZRNznoDw==, tarball: esbuild-windows-64/download/esbuild-windows-64-0.14.10.tgz}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-windows-arm64/0.13.15:
+    resolution: {integrity: sha512-zzvyCVVpbwQQATaf3IG8mu1IwGEiDxKkYUdA4FpoCHi1KtPa13jeScYDjlW0Qh+ebWzpKfR2ZwvqAQkSWNcKjA==, tarball: esbuild-windows-arm64/download/esbuild-windows-arm64-0.13.15.tgz}
+    cpu: [arm64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-windows-arm64/0.14.10:
+    resolution: {integrity: sha512-OJOyxDtabvcUYTc+O4dR0JMzLBz6G9+gXIHA7Oc5d5Fv1xiYa0nUeo8+W5s2e6ZkPRdIwOseYoL70rZz80S5BA==, tarball: esbuild-windows-arm64/download/esbuild-windows-arm64-0.14.10.tgz}
+    cpu: [arm64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild/0.13.15:
+    resolution: {integrity: sha512-raCxt02HBKv8RJxE8vkTSCXGIyKHdEdGfUmiYb8wnabnaEmHzyW7DCHb5tEN0xU8ryqg5xw54mcwnYkC4x3AIw==, tarball: esbuild/download/esbuild-0.13.15.tgz}
+    hasBin: true
+    requiresBuild: true
+    optionalDependencies:
+      esbuild-android-arm64: 0.13.15
+      esbuild-darwin-64: 0.13.15
+      esbuild-darwin-arm64: 0.13.15
+      esbuild-freebsd-64: 0.13.15
+      esbuild-freebsd-arm64: 0.13.15
+      esbuild-linux-32: 0.13.15
+      esbuild-linux-64: 0.13.15
+      esbuild-linux-arm: 0.13.15
+      esbuild-linux-arm64: 0.13.15
+      esbuild-linux-mips64le: 0.13.15
+      esbuild-linux-ppc64le: 0.13.15
+      esbuild-netbsd-64: 0.13.15
+      esbuild-openbsd-64: 0.13.15
+      esbuild-sunos-64: 0.13.15
+      esbuild-windows-32: 0.13.15
+      esbuild-windows-64: 0.13.15
+      esbuild-windows-arm64: 0.13.15
+    dev: true
+
+  /esbuild/0.14.10:
+    resolution: {integrity: sha512-ibZb+NwFqBwHHJlpnFMtg4aNmVK+LUtYMFC9CuKs6lDCBEvCHpqCFZFEirpqt1jOugwKGx8gALNGvX56lQyfew==, tarball: esbuild/download/esbuild-0.14.10.tgz}
+    hasBin: true
+    requiresBuild: true
+    optionalDependencies:
+      esbuild-android-arm64: 0.14.10
+      esbuild-darwin-64: 0.14.10
+      esbuild-darwin-arm64: 0.14.10
+      esbuild-freebsd-64: 0.14.10
+      esbuild-freebsd-arm64: 0.14.10
+      esbuild-linux-32: 0.14.10
+      esbuild-linux-64: 0.14.10
+      esbuild-linux-arm: 0.14.10
+      esbuild-linux-arm64: 0.14.10
+      esbuild-linux-mips64le: 0.14.10
+      esbuild-linux-ppc64le: 0.14.10
+      esbuild-linux-s390x: 0.14.10
+      esbuild-netbsd-64: 0.14.10
+      esbuild-openbsd-64: 0.14.10
+      esbuild-sunos-64: 0.14.10
+      esbuild-windows-32: 0.14.10
+      esbuild-windows-64: 0.14.10
+      esbuild-windows-arm64: 0.14.10
+    dev: true
+
+  /esno/0.13.0_typescript@4.5.4:
+    resolution: {integrity: sha512-rgVOc/t+4QgAHTsQiFKX2olzJLIcBOYGYUb/moEDLXcz0pIf8NxwuFu5nOAMmOsNiFfhSrfgcLgVCOtmBIBeuQ==, tarball: esno/download/esno-0.13.0.tgz}
+    hasBin: true
+    dependencies:
+      cross-spawn: 7.0.3
+      esbuild: 0.14.10
+      esbuild-node-loader: 0.6.3_typescript@4.5.4
+      esbuild-register: 3.3.1_esbuild@0.14.10
+      import-meta-resolve: 1.1.1
+    transitivePeerDependencies:
+      - typescript
+    dev: true
+
+  /estree-walker/1.0.1:
+    resolution: {integrity: sha1-MbxdYSyWtwQQa0d+bdXYqhOMtwA=, tarball: estree-walker/download/estree-walker-1.0.1.tgz}
+    dev: true
+
+  /estree-walker/2.0.2:
+    resolution: {integrity: sha1-UvAQF4wqTBF6d1fP6UKtt9LaTKw=, tarball: estree-walker/download/estree-walker-2.0.2.tgz}
+    dev: true
+
+  /eventemitter3/3.1.2:
+    resolution: {integrity: sha1-LT1I+cNGaY/Og6hdfWZOmFNd9uc=, tarball: eventemitter3/download/eventemitter3-3.1.2.tgz?cache=0&sync_timestamp=1632820928055&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Feventemitter3%2Fdownload%2Feventemitter3-3.1.2.tgz}
+    dev: true
+
+  /find-cache-dir/3.3.2:
+    resolution: {integrity: sha1-swxbbv8HMHMa6pu9nb7L2AJW1ks=, tarball: find-cache-dir/download/find-cache-dir-3.3.2.tgz}
+    engines: {node: '>=8'}
+    dependencies:
+      commondir: 1.0.1
+      make-dir: 3.1.0
+      pkg-dir: 4.2.0
+    dev: true
+
+  /find-up/4.1.0:
+    resolution: {integrity: sha1-l6/n1s3AvFkoWEt8jXsW6KmqXRk=, tarball: find-up/download/find-up-4.1.0.tgz}
+    engines: {node: '>=8'}
+    dependencies:
+      locate-path: 5.0.0
+      path-exists: 4.0.0
+    dev: true
+
+  /find-up/5.0.0:
+    resolution: {integrity: sha1-TJKBnstwg1YeT0okCoa+UZj1Nvw=, tarball: find-up/download/find-up-5.0.0.tgz}
+    engines: {node: '>=10'}
+    dependencies:
+      locate-path: 6.0.0
+      path-exists: 4.0.0
+    dev: true
+
+  /fs-extra/8.1.0:
+    resolution: {integrity: sha1-SdQ8RaiM2Wd2aMt74bRu/bjS4cA=, tarball: fs-extra/download/fs-extra-8.1.0.tgz}
+    engines: {node: '>=6 <7 || >=8'}
+    dependencies:
+      graceful-fs: 4.2.9
+      jsonfile: 4.0.0
+      universalify: 0.1.2
+    dev: true
+
+  /fs.realpath/1.0.0:
+    resolution: {integrity: sha1-FQStJSMVjKpA20onh8sBQRmU6k8=, tarball: fs.realpath/download/fs.realpath-1.0.0.tgz}
+    dev: true
+
+  /fsevents/2.3.2:
+    resolution: {integrity: sha1-ilJveLj99GI7cJ4Ll1xSwkwC/Ro=, tarball: fsevents/download/fsevents-2.3.2.tgz}
+    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /function-bind/1.1.1:
+    resolution: {integrity: sha1-pWiZ0+o8m6uHS7l3O3xe3pL0iV0=, tarball: function-bind/download/function-bind-1.1.1.tgz}
+    dev: true
+
+  /glob/7.2.0:
+    resolution: {integrity: sha512-lmLf6gtyrPq8tTjSmrO94wBeQbFR3HbLHbuyD69wuyQkImp2hWqMGB47OX65FBkPffO641IP9jWa1z4ivqG26Q==, tarball: glob/download/glob-7.2.0.tgz}
+    dependencies:
+      fs.realpath: 1.0.0
+      inflight: 1.0.6
+      inherits: 2.0.4
+      minimatch: 3.0.4
+      once: 1.4.0
+      path-is-absolute: 1.0.1
+    dev: true
+
+  /graceful-fs/4.2.9:
+    resolution: {integrity: sha512-NtNxqUcXgpW2iMrfqSfR73Glt39K+BLwWsPs94yR63v45T0Wbej7eRmL5cWfwEgqXnmjQp3zaJTshdRW/qC2ZQ==, tarball: graceful-fs/download/graceful-fs-4.2.9.tgz}
+    dev: true
+
+  /has/1.0.3:
+    resolution: {integrity: sha1-ci18v8H2qoJB8W3YFOAR4fQeh5Y=, tarball: has/download/has-1.0.3.tgz}
+    engines: {node: '>= 0.4.0'}
+    dependencies:
+      function-bind: 1.1.1
+    dev: true
+
+  /import-meta-resolve/1.1.1:
+    resolution: {integrity: sha1-JE/VQv0frnNVDU+LPN47uh17Kxg=, tarball: import-meta-resolve/download/import-meta-resolve-1.1.1.tgz}
+    dependencies:
+      builtins: 4.0.0
+    dev: true
+
+  /inflight/1.0.6:
+    resolution: {integrity: sha1-Sb1jMdfQLQwJvJEKEHW6gWW1bfk=, tarball: inflight/download/inflight-1.0.6.tgz}
+    dependencies:
+      once: 1.4.0
+      wrappy: 1.0.2
+    dev: true
+
+  /inherits/2.0.4:
+    resolution: {integrity: sha1-D6LGT5MpF8NDOg3tVTY6rjdBa3w=, tarball: inherits/download/inherits-2.0.4.tgz}
+    dev: true
+
+  /is-core-module/2.8.0:
+    resolution: {integrity: sha1-AyEzbD0JJeSX/Zf12VyxFKXM1Ug=, tarball: is-core-module/download/is-core-module-2.8.0.tgz}
+    dependencies:
+      has: 1.0.3
+    dev: true
+
+  /is-module/1.0.0:
+    resolution: {integrity: sha1-Mlj7afeMFNW4FdZkM2tM/7ZEFZE=, tarball: is-module/download/is-module-1.0.0.tgz}
+    dev: true
+
+  /is-reference/1.2.1:
+    resolution: {integrity: sha1-iy2sCzcfS8mU/eq6nrVC0DAC0Lc=, tarball: is-reference/download/is-reference-1.2.1.tgz}
+    dependencies:
+      '@types/estree': 0.0.39
+    dev: true
+
+  /isexe/2.0.0:
+    resolution: {integrity: sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=, tarball: isexe/download/isexe-2.0.0.tgz}
+    dev: true
+
+  /ismobilejs/1.1.1:
+    resolution: {integrity: sha1-xWygro5Sskyg8iul7zIVot27qg4=, tarball: ismobilejs/download/ismobilejs-1.1.1.tgz}
+    dev: true
+
+  /joycon/3.1.1:
+    resolution: {integrity: sha512-34wB/Y7MW7bzjKRjUKTa46I2Z7eV62Rkhva+KkopW7Qvv/OSWBqvkSY7vusOPrNuZcUG3tApvdVgNB8POj3SPw==, tarball: joycon/download/joycon-3.1.1.tgz}
+    engines: {node: '>=10'}
+    dev: true
+
+  /jsonc-parser/3.0.0:
+    resolution: {integrity: sha1-q914VwHH5+rKip7IzwcMpRp0WiI=, tarball: jsonc-parser/download/jsonc-parser-3.0.0.tgz}
+    dev: true
+
+  /jsonfile/4.0.0:
+    resolution: {integrity: sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss=, tarball: jsonfile/download/jsonfile-4.0.0.tgz}
+    optionalDependencies:
+      graceful-fs: 4.2.9
+    dev: true
+
+  /locate-path/5.0.0:
+    resolution: {integrity: sha1-Gvujlq/WdqbUJQTQpno6frn2KqA=, tarball: locate-path/download/locate-path-5.0.0.tgz}
+    engines: {node: '>=8'}
+    dependencies:
+      p-locate: 4.1.0
+    dev: true
+
+  /locate-path/6.0.0:
+    resolution: {integrity: sha1-VTIeswn+u8WcSAHZMackUqaB0oY=, tarball: locate-path/download/locate-path-6.0.0.tgz}
+    engines: {node: '>=10'}
+    dependencies:
+      p-locate: 5.0.0
+    dev: true
+
+  /lru-cache/6.0.0:
+    resolution: {integrity: sha1-bW/mVw69lqr5D8rR2vo7JWbbOpQ=, tarball: lru-cache/download/lru-cache-6.0.0.tgz}
+    engines: {node: '>=10'}
+    dependencies:
+      yallist: 4.0.0
+    dev: true
+
+  /magic-string/0.25.7:
+    resolution: {integrity: sha1-P0l9b9NMZpxnmNy4IfLvMfVEUFE=, tarball: magic-string/download/magic-string-0.25.7.tgz}
+    dependencies:
+      sourcemap-codec: 1.4.8
+    dev: true
+
+  /make-dir/3.1.0:
+    resolution: {integrity: sha1-QV6WcEazp/HRhSd9hKpYIDcmoT8=, tarball: make-dir/download/make-dir-3.1.0.tgz}
+    engines: {node: '>=8'}
+    dependencies:
+      semver: 6.3.0
+    dev: true
+
+  /minimatch/3.0.4:
+    resolution: {integrity: sha1-UWbihkV/AzBgZL5Ul+jbsMPTIIM=, tarball: minimatch/download/minimatch-3.0.4.tgz}
+    dependencies:
+      brace-expansion: 1.1.11
+    dev: true
+
+  /ms/2.1.2:
+    resolution: {integrity: sha1-0J0fNXtEP0kzgqjrPM0YOHKuYAk=, tarball: ms/download/ms-2.1.2.tgz}
+    dev: true
+
+  /object-assign/4.1.1:
+    resolution: {integrity: sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=, tarball: object-assign/download/object-assign-4.1.1.tgz}
+    engines: {node: '>=0.10.0'}
+    dev: true
+
+  /once/1.4.0:
+    resolution: {integrity: sha1-WDsap3WWHUsROsF9nFC6753Xa9E=, tarball: once/download/once-1.4.0.tgz}
+    dependencies:
+      wrappy: 1.0.2
+    dev: true
+
+  /p-limit/2.3.0:
+    resolution: {integrity: sha1-PdM8ZHohT9//2DWTPrCG2g3CHbE=, tarball: p-limit/download/p-limit-2.3.0.tgz}
+    engines: {node: '>=6'}
+    dependencies:
+      p-try: 2.2.0
+    dev: true
+
+  /p-limit/3.1.0:
+    resolution: {integrity: sha1-4drMvnjQ0TiMoYxk/qOOPlfjcGs=, tarball: p-limit/download/p-limit-3.1.0.tgz}
+    engines: {node: '>=10'}
+    dependencies:
+      yocto-queue: 0.1.0
+    dev: true
+
+  /p-locate/4.1.0:
+    resolution: {integrity: sha1-o0KLtwiLOmApL2aRkni3wpetTwc=, tarball: p-locate/download/p-locate-4.1.0.tgz}
+    engines: {node: '>=8'}
+    dependencies:
+      p-limit: 2.3.0
+    dev: true
+
+  /p-locate/5.0.0:
+    resolution: {integrity: sha1-g8gxXGeFAF470CGDlBHJ4RDm2DQ=, tarball: p-locate/download/p-locate-5.0.0.tgz}
+    engines: {node: '>=10'}
+    dependencies:
+      p-limit: 3.1.0
+    dev: true
+
+  /p-try/2.2.0:
+    resolution: {integrity: sha1-yyhoVA4xPWHeWPr741zpAE1VQOY=, tarball: p-try/download/p-try-2.2.0.tgz}
+    engines: {node: '>=6'}
+    dev: true
+
+  /path-exists/4.0.0:
+    resolution: {integrity: sha1-UTvb4tO5XXdi6METfvoZXGxhtbM=, tarball: path-exists/download/path-exists-4.0.0.tgz}
+    engines: {node: '>=8'}
+    dev: true
+
+  /path-is-absolute/1.0.1:
+    resolution: {integrity: sha1-F0uSaHNVNP+8es5r9TpanhtcX18=, tarball: path-is-absolute/download/path-is-absolute-1.0.1.tgz}
+    engines: {node: '>=0.10.0'}
+    dev: true
+
+  /path-is-network-drive/1.0.13:
+    resolution: {integrity: sha512-Hg74mRN6mmXV+gTm3INjFK40ncAmC/Lo4qoQaSZ+GT3hZzlKdWQSqAjqyPeW0SvObP2W073WyYEBWY9d3wOm3A==, tarball: path-is-network-drive/download/path-is-network-drive-1.0.13.tgz}
+    dependencies:
+      tslib: 2.3.1
+    dev: true
+
+  /path-key/3.1.1:
+    resolution: {integrity: sha1-WB9q3mWMu6ZaDTOA3ndTKVBU83U=, tarball: path-key/download/path-key-3.1.1.tgz}
+    engines: {node: '>=8'}
+    dev: true
+
+  /path-parse/1.0.7:
+    resolution: {integrity: sha1-+8EUtgykKzDZ2vWFjkvWi77bZzU=, tarball: path-parse/download/path-parse-1.0.7.tgz}
+    dev: true
+
+  /path-strip-sep/1.0.10:
+    resolution: {integrity: sha512-JpCy+8LAJQQTO1bQsb/84s1g+/Stm3h39aOpPRBQ/paMUGVPPZChLTOTKHoaCkc/6sKuF7yVsnq5Pe1S6xQGcA==, tarball: path-strip-sep/download/path-strip-sep-1.0.10.tgz}
+    dependencies:
+      tslib: 2.3.1
+    dev: true
+
+  /picomatch/2.3.1:
+    resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==, tarball: picomatch/download/picomatch-2.3.1.tgz}
+    engines: {node: '>=8.6'}
+    dev: true
+
+  /pixi.js/6.2.1:
+    resolution: {integrity: sha512-oZaa4QAkzcYnXRBH3O8u2LuUVO6gTPKSZijZIYhv6+EDBULZvPxlOZf7jFQNpXVgKAXhptQmOytO1LnWMuK2Sg==, tarball: pixi.js/download/pixi.js-6.2.1.tgz}
+    dependencies:
+      '@pixi/accessibility': 6.2.1_0d73c62036669f541116e605da87f869
+      '@pixi/app': 6.2.1_aceb95ab22e2234d543e5a00b62355d3
+      '@pixi/compressed-textures': 6.2.1_4570dd0dd66864252550461512680eed
+      '@pixi/constants': 6.2.1
+      '@pixi/core': 6.2.1_df051550645010bdf6fa89694bb02821
+      '@pixi/display': 6.2.1_1d33a1a6f36d9b164ecad80ec2850ee4
+      '@pixi/extract': 6.2.1_720b1a2efe21855310638cafcfb57ede
+      '@pixi/filter-alpha': 6.2.1_@pixi+core@6.2.1
+      '@pixi/filter-blur': 6.2.1_7e73f8e619ab2754135a83402dece0a7
+      '@pixi/filter-color-matrix': 6.2.1_@pixi+core@6.2.1
+      '@pixi/filter-displacement': 6.2.1_466426cda9ccff9f6b7ca02ef067a902
+      '@pixi/filter-fxaa': 6.2.1_@pixi+core@6.2.1
+      '@pixi/filter-noise': 6.2.1_@pixi+core@6.2.1
+      '@pixi/graphics': 6.2.1_034fe82e0b7c37335078a5be42a50651
+      '@pixi/interaction': 6.2.1_2f12d893b3b69cfbe54a5422fcfb7e1e
+      '@pixi/loaders': 6.2.1_0445c811d1aa420add98db068b3fbdb0
+      '@pixi/math': 6.2.1
+      '@pixi/mesh': 6.2.1_a5021554595e851f1bd0aeb0c831d747
+      '@pixi/mesh-extras': 6.2.1_f1d195b9b3256951824ba57c8871862e
+      '@pixi/mixin-cache-as-bitmap': 6.2.1_ba4fdb112950673509298511dc6b3afd
+      '@pixi/mixin-get-child-by-name': 6.2.1_@pixi+display@6.2.1
+      '@pixi/mixin-get-global-position': 6.2.1_56b20ebf8842efecd39d113c254f170d
+      '@pixi/particle-container': 6.2.1_4912b6a6a843e20da688d7ff2a4fb940
+      '@pixi/polyfill': 6.2.1
+      '@pixi/prepare': 6.2.1_af55ba3ad4aed622a0ddec9f80a6fcab
+      '@pixi/runner': 6.2.1
+      '@pixi/settings': 6.2.1
+      '@pixi/sprite': 6.2.1_a5021554595e851f1bd0aeb0c831d747
+      '@pixi/sprite-animated': 6.2.1_d611442354a186932caa7508522c6d21
+      '@pixi/sprite-tiling': 6.2.1_034fe82e0b7c37335078a5be42a50651
+      '@pixi/spritesheet': 6.2.1_f7272aeb0863e6b6ce7dd21b6fb952c9
+      '@pixi/text': 6.2.1_ea0f6c1db7ab9c63b2a36efd859e0e1e
+      '@pixi/text-bitmap': 6.2.1_ee50e84376f7bae8d8c67165504906b8
+      '@pixi/ticker': 6.2.1_@pixi+settings@6.2.1
+      '@pixi/utils': 6.2.1_3e04be5e664f83402a3249471d1d4424
+    dev: true
+
+  /pkg-dir/4.2.0:
+    resolution: {integrity: sha1-8JkTPfft5CLoHR2ESCcO6z5CYfM=, tarball: pkg-dir/download/pkg-dir-4.2.0.tgz}
+    engines: {node: '>=8'}
+    dependencies:
+      find-up: 4.1.0
+    dev: true
+
+  /pkg-dir/5.0.0:
+    resolution: {integrity: sha1-oC1q6+a6EzqSj3Suwguv3+a452A=, tarball: pkg-dir/download/pkg-dir-5.0.0.tgz}
+    engines: {node: '>=10'}
+    dependencies:
+      find-up: 5.0.0
+    dev: true
+
+  /promise-polyfill/8.2.1:
+    resolution: {integrity: sha1-H6lVsyW+5Pa4pDEeGBSNTltG0lQ=, tarball: promise-polyfill/download/promise-polyfill-8.2.1.tgz}
+    dev: true
+
+  /punycode/1.3.2:
+    resolution: {integrity: sha1-llOgNvt8HuQjQvIyXM7v6jkmxI0=, tarball: punycode/download/punycode-1.3.2.tgz}
+    dev: true
+
+  /querystring/0.2.0:
+    resolution: {integrity: sha1-sgmEkgO7Jd+CDadW50cAWHhSFiA=, tarball: querystring/download/querystring-0.2.0.tgz?cache=0&sync_timestamp=1636364727496&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fquerystring%2Fdownload%2Fquerystring-0.2.0.tgz}
+    engines: {node: '>=0.4.x'}
+    deprecated: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
+    dev: true
+
+  /resolve/1.20.0:
+    resolution: {integrity: sha1-YpoBP7P3B1XW8LeTXMHCxTeLGXU=, tarball: resolve/download/resolve-1.20.0.tgz}
+    dependencies:
+      is-core-module: 2.8.0
+      path-parse: 1.0.7
+    dev: true
+
+  /rimraf/3.0.2:
+    resolution: {integrity: sha1-8aVAK6YiCtUswSgrrBrjqkn9Bho=, tarball: rimraf/download/rimraf-3.0.2.tgz}
+    hasBin: true
+    dependencies:
+      glob: 7.2.0
+    dev: true
+
+  /rollup-plugin-esbuild/4.8.2_rollup@2.63.0:
+    resolution: {integrity: sha512-wsaYNOjzTb6dN1qCIZsMZ7Q0LWiPJklYs2TDI8vJA2LUbvtPUY+17TC8C0vSat3jPMInfR9XWKdA7ttuwkjsGQ==, tarball: rollup-plugin-esbuild/download/rollup-plugin-esbuild-4.8.2.tgz}
+    engines: {node: '>=12'}
+    peerDependencies:
+      esbuild: '>=0.10.1'
+      rollup: ^1.20.0 || ^2.0.0
+    dependencies:
+      '@rollup/pluginutils': 4.1.2
+      debug: 4.3.3
+      es-module-lexer: 0.9.3
+      joycon: 3.1.1
+      jsonc-parser: 3.0.0
+      rollup: 2.63.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /rollup-plugin-typescript2/0.31.1_rollup@2.63.0+typescript@4.5.4:
+    resolution: {integrity: sha512-sklqXuQwQX+stKi4kDfEkneVESPi3YM/2S899vfRdF9Yi40vcC50Oq4A4cSZJNXsAQE/UsBZl5fAOsBLziKmjw==, tarball: rollup-plugin-typescript2/download/rollup-plugin-typescript2-0.31.1.tgz}
+    peerDependencies:
+      rollup: '>=1.26.3'
+      typescript: '>=2.4.0'
+    dependencies:
+      '@rollup/pluginutils': 4.1.2
+      '@yarn-tool/resolve-package': 1.0.41
+      find-cache-dir: 3.3.2
+      fs-extra: 8.1.0
+      resolve: 1.20.0
+      rollup: 2.63.0
+      tslib: 2.2.0
+      typescript: 4.5.4
+    transitivePeerDependencies:
+      - '@types/bluebird'
+      - '@types/node'
+      - ts-toolbelt
+    dev: true
+
+  /rollup/2.63.0:
+    resolution: {integrity: sha512-nps0idjmD+NXl6OREfyYXMn/dar3WGcyKn+KBzPdaLecub3x/LrId0wUcthcr8oZUAcZAR8NKcfGGFlNgGL1kQ==, tarball: rollup/download/rollup-2.63.0.tgz}
+    engines: {node: '>=10.0.0'}
+    hasBin: true
+    optionalDependencies:
+      fsevents: 2.3.2
+    dev: true
+
+  /semver/6.3.0:
+    resolution: {integrity: sha1-7gpkyK9ejO6mdoexM3YeG+y9HT0=, tarball: semver/download/semver-6.3.0.tgz}
+    hasBin: true
+    dev: true
+
+  /semver/7.3.5:
+    resolution: {integrity: sha1-C2Ich5NI2JmOSw5L6Us/EuYBjvc=, tarball: semver/download/semver-7.3.5.tgz}
+    engines: {node: '>=10'}
+    hasBin: true
+    dependencies:
+      lru-cache: 6.0.0
+    dev: true
+
+  /shebang-command/2.0.0:
+    resolution: {integrity: sha1-zNCvT4g1+9wmW4JGGq8MNmY/NOo=, tarball: shebang-command/download/shebang-command-2.0.0.tgz}
+    engines: {node: '>=8'}
+    dependencies:
+      shebang-regex: 3.0.0
+    dev: true
+
+  /shebang-regex/3.0.0:
+    resolution: {integrity: sha1-rhbxZE2HPsrYQ7AwexQzYtTEIXI=, tarball: shebang-regex/download/shebang-regex-3.0.0.tgz}
+    engines: {node: '>=8'}
+    dev: true
+
+  /sourcemap-codec/1.4.8:
+    resolution: {integrity: sha1-6oBL2UhXQC5pktBaOO8a41qatMQ=, tarball: sourcemap-codec/download/sourcemap-codec-1.4.8.tgz}
+    dev: true
+
+  /ts-type/2.1.2:
+    resolution: {integrity: sha512-64/2XoaipFXa/bidwXChQCSJ3VaCUVKrEaRPXiP5gLIlkPoAHfnwOMC0EWr42DsTm/+qYYuNwzxc0VQroeDs+g==, tarball: ts-type/download/ts-type-2.1.2.tgz}
+    peerDependencies:
+      '@types/bluebird': '*'
+      '@types/node': '*'
+      ts-toolbelt: ^9.6.0
+    dependencies:
+      tslib: 2.3.1
+      typedarray-dts: 1.0.0
+    dev: true
+
+  /tslib/2.2.0:
+    resolution: {integrity: sha1-+yxHWXfjXiQTEe3iaTzuHsZpj1w=, tarball: tslib/download/tslib-2.2.0.tgz}
+    dev: true
+
+  /tslib/2.3.1:
+    resolution: {integrity: sha1-6KM1rdXOrlGqJh0ypJAVjvBC7wE=, tarball: tslib/download/tslib-2.3.1.tgz}
+    dev: true
+
+  /typedarray-dts/1.0.0:
+    resolution: {integrity: sha1-neyYEThtv7qWTClcJgbPmmuYLQY=, tarball: typedarray-dts/download/typedarray-dts-1.0.0.tgz}
+    dev: true
+
+  /typescript/4.5.4:
+    resolution: {integrity: sha512-VgYs2A2QIRuGphtzFV7aQJduJ2gyfTljngLzjpfW9FoYZF6xuw1W0vW9ghCKLfcWrCFxK81CSGRAvS1pn4fIUg==, tarball: typescript/download/typescript-4.5.4.tgz}
+    engines: {node: '>=4.2.0'}
+    hasBin: true
+    dev: true
+
+  /universalify/0.1.2:
+    resolution: {integrity: sha1-tkb2m+OULavOzJ1mOcgNwQXvqmY=, tarball: universalify/download/universalify-0.1.2.tgz}
+    engines: {node: '>= 4.0.0'}
+    dev: true
+
+  /upath2/3.1.12:
+    resolution: {integrity: sha512-yC3eZeCyCXFWjy7Nu4pgjLhXNYjuzuUmJiRgSSw6TJp8Emc+E4951HGPJf+bldFC5SL7oBLeNbtm1fGzXn2gxw==, tarball: upath2/download/upath2-3.1.12.tgz}
+    peerDependencies:
+      '@types/node': '*'
+    dependencies:
+      path-is-network-drive: 1.0.13
+      path-strip-sep: 1.0.10
+      tslib: 2.3.1
+    dev: true
+
+  /url/0.11.0:
+    resolution: {integrity: sha512-kbailJa29QrtXnxgq+DdCEGlbTeYM2eJUxsz6vjZavrCYPMIFHMKQmSKYAIuUK2i7hgPm28a8piX5NTUtM/LKQ==, tarball: url/download/url-0.11.0.tgz}
+    dependencies:
+      punycode: 1.3.2
+      querystring: 0.2.0
+    dev: true
+
+  /which/2.0.2:
+    resolution: {integrity: sha1-fGqN0KY2oDJ+ELWckobu6T8/UbE=, tarball: which/download/which-2.0.2.tgz}
+    engines: {node: '>= 8'}
+    hasBin: true
+    dependencies:
+      isexe: 2.0.0
+    dev: true
+
+  /wrappy/1.0.2:
+    resolution: {integrity: sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=, tarball: wrappy/download/wrappy-1.0.2.tgz}
+    dev: true
+
+  /yallist/4.0.0:
+    resolution: {integrity: sha1-m7knkNnA7/7GO+c1GeEaNQGaOnI=, tarball: yallist/download/yallist-4.0.0.tgz}
+    dev: true
+
+  /yocto-queue/0.1.0:
+    resolution: {integrity: sha1-ApTrPe4FAo0x7hpfosVWpqrxChs=, tarball: yocto-queue/download/yocto-queue-0.1.0.tgz}
+    engines: {node: '>=10'}
+    dev: true
