@@ -2,8 +2,8 @@ import * as PIXI from 'pixi.js';
 
 function rgbToGray(img, width, height) {
   const gray = new Array(width).fill("").map(() => []);
-  for (let w = 0; w < width; ++w) {
-    for (let h = 0; h < height; ++h) {
+  for (let h = 0; h < height; ++h) {
+    for (let w = 0; w < width; ++w) {
       const pos = (width * h + w) * 4;
       gray[w][h] = 0.3 * img[pos] + 0.59 * img[pos + 1] + 0.11 * img[pos + 2];
     }
@@ -51,7 +51,8 @@ const defaultConfig = {
   seeds: [[0, 0]],
   thresh: 10,
   imgGap: 6,
-  origin: "left-top"
+  origin: "left-top",
+  particleSize: 2
 };
 function objectFit(type = "fill", origin, target) {
   const whr = origin.width / origin.height;
@@ -99,6 +100,7 @@ function objectFit(type = "fill", origin, target) {
 class Stage {
   app;
   dots = [];
+  particleSize = 2;
   shape = [];
   animateEnd = false;
   constructor(el) {
@@ -106,8 +108,7 @@ class Stage {
       width: el.offsetWidth,
       height: el.offsetHeight,
       antialias: true,
-      backgroundAlpha: 0,
-      forceCanvas: true
+      backgroundAlpha: 0
     });
     el.appendChild(this.app.view);
   }
@@ -121,8 +122,9 @@ class Stage {
       for (let i2 = 0; i2 < restSize; ++i2) {
         this.dots.push(new Dot(this.app, {
           x: this.app.view.width / 2,
-          y: this.app.view.height / 2
-        }));
+          y: this.app.view.height / 2,
+          size: this.particleSize
+        }, i2));
       }
     }
     let i = 0;
@@ -137,7 +139,8 @@ class Stage {
         x: shape[i].x,
         y: shape[i].y,
         h: 0,
-        a: 1
+        a: 1,
+        size: this.particleSize
       });
       shape = shape.slice(0, i).concat(shape.slice(i + 1));
       d++;
@@ -146,10 +149,18 @@ class Stage {
       if (!this.dots[i2].still) {
         continue;
       }
+      this.dots[i2].move({
+        size: Math.random() * 20 + 10,
+        a: Math.random(),
+        h: 20
+      });
       this.dots[i2].still = false;
       this.dots[i2].move({
         x: this.app.view.width * Math.random(),
-        y: this.app.view.height * Math.random()
+        y: this.app.view.height * Math.random(),
+        a: 0.3,
+        size: Math.random() * 4,
+        h: 0
       });
     }
   }
@@ -173,6 +184,7 @@ class Stage {
   }
   async loadImage(url, options) {
     const config = { ...defaultConfig, ...options };
+    this.particleSize = config.particleSize;
     return new Promise((resolve) => {
       PIXI.Loader.shared.add(url).load((loader, resource) => {
         const image = new PIXI.Sprite(resource[url].texture);
@@ -198,8 +210,8 @@ class Stage {
         const mark = regionGrow(gray, config.seeds, config.thresh);
         const gap = config.imgGap;
         const posList = [];
-        for (let w = 0; w < image.width; w += gap) {
-          for (let h = 0; h < image.height; h += gap) {
+        for (let h = 0; h < image.height; h += gap) {
+          for (let w = 0; w < image.width; w += gap) {
             if (mark[w][h]) {
               continue;
             }
@@ -216,35 +228,25 @@ class Stage {
   }
 }
 class Dot {
-  size;
+  id;
   inst;
   app;
-  alpha;
+  point;
   target;
   queue = [];
-  h = 0;
   step = 0.25;
   still = false;
-  constructor(app, options) {
+  constructor(app, options = {}, id) {
+    this.id = id;
     this.app = app;
-    const { x: rx, y: ry } = this.randomPosition();
-    const x = options?.x ?? rx;
-    const y = options?.y ?? ry;
+    const randomP = this.randomPosition();
     this.still = false;
-    this.h = options?.h ?? 0;
-    this.size = 3;
+    this.point = { ...randomP, ...options };
+    this.point.h = options.h ?? 0;
+    this.point.size = 2;
+    this.point.a = 0.5;
     this.inst = new PIXI.Graphics();
-    this.alpha = 0.5;
-    this.inst.beginFill(16777215);
-    this.inst.alpha = this.alpha;
-    this.inst.position.set(x, y);
-    this.inst.drawCircle(0, 0, this.size);
-    this.target = {
-      x,
-      y,
-      h: 0,
-      a: this.alpha
-    };
+    this.target = { ...this.point };
     this.app.stage.addChild(this.inst);
   }
   randomPosition() {
@@ -257,8 +259,8 @@ class Dot {
       return [];
     }
     const { x, y } = node;
-    const dx = this.inst.x - (x ?? 0);
-    const dy = this.inst.y - (y ?? 0);
+    const dx = this.point.x - (x ?? 0);
+    const dy = this.point.y - (y ?? 0);
     const dist = Math.sqrt(dx * dx + dy * dy);
     return [dx, dy, dist];
   }
@@ -266,33 +268,51 @@ class Dot {
     this.queue.push(point);
   }
   render() {
-    this.inst.alpha = this.target.a;
+    this.inst.clear();
+    this.inst.beginFill(16777215);
+    this.inst.alpha = this.point.a;
+    this.inst.drawCircle(0, 0, this.point.size);
+    this.inst.position.set(this.point.x, this.point.y);
   }
-  update() {
-    const [dx, dy, d] = this.distanceTo(this.target);
+  moveTo(target) {
+    const [dx, dy, d] = this.distanceTo(target);
     if (d > 1) {
-      this.inst.x -= dx / d * 0.1 * d;
-      this.inst.y -= dy / d * 0.1 * d;
-    } else if (this.target.h && this.target.h > 0) {
-      --this.target.h;
+      this.point.x -= dx / d * 0.1 * d;
+      this.point.y -= dy / d * 0.1 * d;
     } else {
-      const last = this.queue.shift();
-      if (last) {
-        this.target.x = last.x ?? this.inst.x;
-        this.target.y = last.y ?? this.inst.y;
-        this.target.h = last.h ?? 0;
-        this.target.a = last.a ?? this.alpha;
-      }
-      if (this.still) {
-        this.inst.x -= Math.sin(Math.random() * 3.142);
-        this.inst.y -= Math.sin(Math.random() * 3.142);
+      if (this.point.h > 0) {
+        --this.point.h;
       } else {
-        this.move({
-          x: this.target.x + Math.random() * 50 - 25,
-          y: this.target.y + Math.random() * 50 - 25
-        });
+        return true;
       }
     }
+    return false;
+  }
+  update() {
+    if (this.moveTo(this.target)) {
+      const last = this.queue.shift();
+      if (last) {
+        this.target.x = last.x ?? this.point.x;
+        this.target.y = last.y ?? this.point.y;
+        this.target.a = last.a ?? this.point.a;
+        this.target.size = last.size ?? this.point.size;
+        this.point.h = last.h ?? 0;
+      } else {
+        if (this.still) {
+          this.point.x -= Math.sin(Math.random() * 3.142);
+          this.point.y -= Math.sin(Math.random() * 3.142);
+        } else {
+          this.move({
+            x: this.point.x + Math.random() * 50 - 25,
+            y: this.point.y + Math.random() * 50 - 25
+          });
+        }
+      }
+    }
+    let diff = this.point.size - this.target.size;
+    this.point.size = Math.max(1, this.point.size - diff * 0.05);
+    diff = this.point.a - this.target.a;
+    this.point.a = Math.max(0.1, this.point.a - diff * 0.05);
   }
 }
 function setTimer(fn, time) {

@@ -1,7 +1,7 @@
 export function rgbToGray(img: number[], width: number, height: number) {
   const gray: number[][] = new Array(width).fill('').map(() => []);
-  for (let w = 0; w < width; ++w) {
-    for (let h = 0; h < height; ++h) {
+  for (let h = 0; h < height; ++h) {
+    for (let w = 0; w < width; ++w) {
       const pos = (width * h + w) * 4
       gray[w][h] = 0.3 * img[pos] + 0.59 * img[pos + 1] + 0.11 * img[pos + 2]
     }
