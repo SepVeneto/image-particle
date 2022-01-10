@@ -76,7 +76,8 @@ const defaultConfig = {
   thresh: 10,
   imgGap: 6,
   origin: "left-top",
-  particleSize: 2
+  particleSize: 2,
+  color: 0
 };
 function objectFit(type = "fill", origin, target) {
   const whr = origin.width / origin.height;
@@ -125,6 +126,7 @@ class Stage {
   app;
   dots = [];
   particleSize = 2;
+  color;
   shape = [];
   animateEnd = false;
   constructor(el) {
@@ -147,8 +149,9 @@ class Stage {
         this.dots.push(new Dot(this.app, {
           x: this.app.view.width / 2,
           y: this.app.view.height / 2,
-          size: this.particleSize
-        }, i2));
+          size: this.particleSize,
+          color: this.color
+        }));
       }
     }
     let i = 0;
@@ -156,6 +159,7 @@ class Stage {
     while (shape.length > 0) {
       i = Math.floor(Math.random() * shape.length);
       this.dots[d]?.move({
+        size: Math.random() * 5 + 5,
         h: 18
       });
       this.dots[d].still = true;
@@ -190,12 +194,39 @@ class Stage {
   }
   start() {
     for (let i = 0; i < 100; ++i) {
-      this.dots.push(new Dot(this.app));
+      this.dots.push(new Dot(this.app, { color: this.color }));
     }
     this.app.ticker.maxFPS = 60;
-    this.app.ticker.add(() => {
+    this.app.ticker.add((delta) => {
       this.render();
     });
+  }
+  setInterval(fn, time) {
+    const that = this;
+    const origin = time * this.app.ticker.maxFPS;
+    let tTime = origin;
+    this.app.ticker.add(update);
+    function update(delta) {
+      if (tTime === origin) {
+        fn.apply(that);
+      }
+      tTime -= delta;
+      if (tTime <= 0) {
+        tTime = origin;
+      }
+    }
+  }
+  setTimer(fn, time) {
+    const that = this;
+    function update(delta) {
+      tTime -= delta;
+      if (tTime <= 0) {
+        fn.apply(that);
+        that.app.ticker.remove(update);
+      }
+    }
+    let tTime = time * this.app.ticker.maxFPS;
+    this.app.ticker.add(update);
   }
   render() {
     this.dots.forEach((dot) => {
@@ -209,6 +240,7 @@ class Stage {
   async loadImage(url, options) {
     const config = { ...defaultConfig, ...options };
     this.particleSize = config.particleSize;
+    this.color = config.color;
     return new Promise((resolve) => {
       PIXI__namespace.Loader.shared.add(url).load((loader, resource) => {
         const image = new PIXI__namespace.Sprite(resource[url].texture);
@@ -252,19 +284,15 @@ class Stage {
   }
 }
 class Dot {
-  id;
   inst;
   app;
   point;
   target;
   queue = [];
-  step = 0.25;
   still = false;
-  constructor(app, options = {}, id) {
-    this.id = id;
+  constructor(app, options = {}) {
     this.app = app;
     const randomP = this.randomPosition();
-    this.still = false;
     this.point = { ...randomP, ...options };
     this.point.h = options.h ?? 0;
     this.point.size = 2;
@@ -293,7 +321,7 @@ class Dot {
   }
   render() {
     this.inst.clear();
-    this.inst.beginFill(16777215);
+    this.inst.beginFill(this.point.color);
     this.inst.alpha = this.point.a;
     this.inst.drawCircle(0, 0, this.point.size);
     this.inst.position.set(this.point.x, this.point.y);
@@ -339,18 +367,6 @@ class Dot {
     this.point.a = Math.max(0.1, this.point.a - diff * 0.05);
   }
 }
-function setTimer(fn, time) {
-  let timer = performance.now();
-  function checkTime() {
-    const curr = performance.now();
-    if (curr - timer >= time) {
-      timer = curr;
-      fn();
-    }
-    requestAnimationFrame(checkTime);
-  }
-  requestAnimationFrame(checkTime);
-}
 function setOrigin(config, width, height) {
   const { x, y } = config;
   switch (config.origin) {
@@ -372,5 +388,4 @@ function setOrigin(config, width, height) {
   }
 }
 
-exports["default"] = Stage;
-exports.setTimer = setTimer;
+exports.Stage = Stage;

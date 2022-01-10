@@ -13,24 +13,33 @@
   <script>
     window.onload = () => {
       const node = document.querySelector('#canvas')
-      const stage = new IMAGE_PARTICLE.default(node)
+      const stage = new IMAGE_PARTICLE.Stage(node)
       stage.loadImage('static/github.jpg', {
         x: document.body.offsetWidth / 2,
         y: document.body.offsetHeight / 2,
-        imgGap: 10,
+        imgGap: 12,
         particleSize: 5,
+        color: 0xff0000,
         type: 'contain',
         origin: 'center',
         thresh: 20,
       }).then((data) => {
         stage.start();
-        stage.switchShape(data)
-        setTimeout(() => {
-          stage.switchShape()
-          setTimeout(() => {
+        // stage.switchShape(data)
+        stage.setInterval(() => {
+          stage.setTimer(() => {
             stage.switchShape(data)
-          }, 5000)
-        }, 3000)
+          }, 1)
+          stage.setTimer(() => {
+            stage.switchShape()
+          }, 5)
+        }, 8)
+        // setTimeout(() => {
+        //   stage.switchShape()
+        //   setTimeout(() => {
+        //     stage.switchShape(data)
+        //   }, 5000)
+        // }, 3000)
       })
     }
   </script>

@@ -1,5 +1,5 @@
 import * as PIXI from 'pixi.js'
-import { Application, TilingSprite } from 'pixi.js'
+import { Application } from 'pixi.js'
 import { rgbToGray, regionGrow } from './toPx'
 
 type FitType = 'fill' | 'contain' | 'cover' | 'none' | 'scale-down'
@@ -10,6 +10,7 @@ interface IPoint {
   h?: number,
   a?: number,
   size?: number,
+  color?: number,
 }
 interface IConfig {
   width?: number,
@@ -22,6 +23,7 @@ interface IConfig {
   imgGap?: number,
   origin?: OriginType,
   particleSize?: number,
+  color?: number,
 }
 
 PIXI.utils.skipHello()
@@ -34,6 +36,7 @@ const defaultConfig = {
   imgGap: 6,
   origin: 'left-top' as OriginType,
   particleSize: 2,
+  color: 0x000000,
 }
 
 /**
@@ -90,10 +93,11 @@ function objectFit(
   }
 }
 
-export default class Stage {
+export class Stage {
   public app: Application
   public dots: Dot[] = []
   public particleSize: number = 2
+  public color?: number
   public shape: { x: number, y: number }[] = []
   public animateEnd = false
   constructor(el: HTMLElement) {
@@ -117,9 +121,9 @@ export default class Stage {
         this.dots.push(new Dot(this.app, {
           x: this.app.view.width / 2,
           y: this.app.view.height / 2,
-          size: this.particleSize
+          size: this.particleSize,
+          color: this.color
         }))
-
       }
     }
 
@@ -129,6 +133,7 @@ export default class Stage {
     while(shape.length > 0) {
       i = Math.floor(Math.random() * shape.length)
       this.dots[d]?.move({
+        size: Math.random() * 5 + 5,
         h: 18,
       })
 
@@ -168,12 +173,39 @@ export default class Stage {
   }
   start() {
     for (let i = 0; i < 100; ++i) {
-      this.dots.push(new Dot(this.app))
+      this.dots.push(new Dot(this.app, { color: this.color }))
     }
     this.app.ticker.maxFPS = 60;
     this.app.ticker.add(() => {
       this.render()
     })
+  }
+  setInterval(fn: () => void, time:  number) {
+    const that = this
+    const origin = time * this.app.ticker.maxFPS
+    let tTime = origin;
+    this.app.ticker.add(update)
+    function update(delta: number) {
+      if (tTime === origin) {
+        fn.apply(that)
+      }
+      tTime -= delta
+      if (tTime <= 0) {
+        tTime = origin
+      }
+    }
+  }
+  setTimer(fn: () => void, time: number) {
+    const that = this
+    function update(delta: number) {
+      tTime -= delta;
+      if (tTime <= 0) {
+        fn.apply(that)
+        that.app.ticker.remove(update)
+      }
+    }
+    let tTime = time * this.app.ticker.maxFPS;
+    this.app.ticker.add(update)
   }
   render() {
     this.dots.forEach(dot => {
@@ -188,6 +220,7 @@ export default class Stage {
   async loadImage(url: string, options: IConfig) {
     const config = { ...defaultConfig, ...options}
     this.particleSize = config.particleSize
+    this.color = config.color;
     return new Promise(resolve => {
       PIXI.Loader.shared.add(url).load((loader, resource) => {
         const image = new PIXI.Sprite(resource[url].texture)
@@ -241,12 +274,10 @@ class Dot {
   public point: Required<IPoint>
   public target: Required<IPoint>
   public queue: IPoint[] = []
-  public step = 0.25
   public still = false
   constructor(app: PIXI.Application, options: IPoint = {}) {
     this.app = app;
     const randomP = this.randomPosition()
-    this.still = false
     this.point = { ...randomP, ...options, } as Required<IPoint>
     this.point.h = options.h ?? 0
     this.point.size = 2;
@@ -277,7 +308,7 @@ class Dot {
   }
   render() {
     this.inst.clear()
-    this.inst.beginFill(0xffffff)
+    this.inst.beginFill(this.point.color)
     this.inst.alpha = this.point.a
     this.inst.drawCircle(0, 0, this.point.size!);
     this.inst.position.set(this.point.x, this.point.y)
@@ -322,19 +353,6 @@ class Dot {
     diff = this.point.a - this.target.a
     this.point.a = Math.max(0.1, this.point.a - (diff * 0.05))
   }
-}
-
-export function setTimer(fn: () => void, time: number) {
-  let timer = performance.now();
-  function checkTime() {
-    const curr = performance.now();
-    if ((curr - timer) >= time) {
-      timer = curr;
-      fn()
-    }
-    requestAnimationFrame(checkTime)
-  }
-  requestAnimationFrame(checkTime)
 }
 
 function setOrigin(config: IConfig & typeof defaultConfig, width: number, height: number) {
