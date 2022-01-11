@@ -173,7 +173,7 @@ class Stage {
       this.dots.push(new Dot(this.app, { color: this.color }));
     }
     this.app.ticker.maxFPS = 60;
-    this.app.ticker.add((delta) => {
+    this.app.ticker.add(() => {
       this.render();
     });
   }

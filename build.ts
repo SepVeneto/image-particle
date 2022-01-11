@@ -29,7 +29,7 @@ async function build() {
   await bundle.write({
     format: 'umd',
     file: './dist/index.umd.js',
-    name: 'IMAGE_PARTICLE',
+    name: 'LOGO_PARTICLE',
     exports: 'named',
     globals: (name) => {
       switch(name) {
