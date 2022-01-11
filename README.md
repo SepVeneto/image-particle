@@ -1,6 +1,8 @@
 # logo-particle
 将logo或图片进行粒子化的动态动画，支持位置，粒子大小、颜色自定义，自适应规则等进行设置。
 
+demo: https://sepveneto.github.io/logo-particle/
+
 ## 使用
 
 ### 兼容性
