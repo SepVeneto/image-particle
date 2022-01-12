@@ -33,10 +33,10 @@ stage.loadImage('/static/github.png', { /* 相关配置 */ }).then((data) => {
 })
 ```
 
-### 通过scripts
+### 通过script
 
 ```html
-<scripts src="./index.umd.js"></scripts>
+<script src="./index.umd.js"></script>
 ```
 
 ```js
