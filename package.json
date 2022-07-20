@@ -1,6 +1,6 @@
 {
   "name": "logo-particle",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "types": "type.d.ts",
   "main": "dist/index.cjs.js",

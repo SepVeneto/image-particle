@@ -213,49 +213,59 @@ class Stage {
       dot.render();
     });
   }
+  _normalizeImage(url, config) {
+    const resource = PIXI.Loader.shared.resources[url];
+    const image = new PIXI.Sprite(resource.texture);
+    const origin = {
+      width: image.width,
+      height: image.height
+    };
+    const target = {
+      width: config.width ?? origin.width,
+      height: config.height ?? origin.height
+    };
+    const { width: iw, height: ih } = objectFit(config.type, origin, target);
+    image.width = iw;
+    image.height = ih;
+    const cImage = this.app.renderer.plugins.extract.canvas(image);
+    const ctx = cImage.getContext("2d");
+    if (!ctx) {
+      console.error("error");
+      return;
+    }
+    const { data, width, height } = ctx.getImageData(image.x, image.y, image.width, image.height);
+    const gray = rgbToGray(data, width, height);
+    const mark = regionGrow(gray, config.seeds, config.thresh);
+    const gap = config.imgGap;
+    const posList = [];
+    for (let h = 0; h < image.height; h += gap) {
+      for (let w = 0; w < image.width; w += gap) {
+        if (mark[w][h]) {
+          continue;
+        }
+        const { offsetX, offsetY } = setOrigin(config, width, height);
+        posList.push({
+          x: w + offsetX,
+          y: h + offsetY
+        });
+      }
+    }
+    return posList;
+  }
   async loadImage(url, options) {
     const config = { ...defaultConfig, ...options };
     this.particleSize = config.particleSize;
     this.color = config.color;
     return new Promise((resolve) => {
-      PIXI.Loader.shared.add(url).load((loader, resource) => {
-        const image = new PIXI.Sprite(resource[url].texture);
-        const origin = {
-          width: image.width,
-          height: image.height
-        };
-        const target = {
-          width: config.width ?? origin.width,
-          height: config.height ?? origin.height
-        };
-        const { width: iw, height: ih } = objectFit(config.type, origin, target);
-        image.width = iw;
-        image.height = ih;
-        const cImage = this.app.renderer.plugins.extract.canvas(image);
-        const ctx = cImage.getContext("2d");
-        if (!ctx) {
-          console.error("error");
-          return;
-        }
-        const { data, width, height } = ctx.getImageData(image.x, image.y, image.width, image.height);
-        const gray = rgbToGray(data, width, height);
-        const mark = regionGrow(gray, config.seeds, config.thresh);
-        const gap = config.imgGap;
-        const posList = [];
-        for (let h = 0; h < image.height; h += gap) {
-          for (let w = 0; w < image.width; w += gap) {
-            if (mark[w][h]) {
-              continue;
-            }
-            const { offsetX, offsetY } = setOrigin(config, width, height);
-            posList.push({
-              x: w + offsetX,
-              y: h + offsetY
-            });
-          }
-        }
+      if (PIXI.Loader.shared.resources[url]) {
+        const posList = this._normalizeImage(url, config);
         resolve(posList);
-      });
+      } else {
+        PIXI.Loader.shared.add(url).load(() => {
+          const posList = this._normalizeImage(url, config);
+          resolve(posList);
+        });
+      }
     });
   }
 }
