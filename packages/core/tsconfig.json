@@ -33,8 +33,7 @@
     ]
   },
   "include": [
-    "packages/**/*.ts",
-    "packages/**/*.vue",
+    "lib/**/*.ts",
   ],
   // "include": [
   //   "packages/**/*.ts",
